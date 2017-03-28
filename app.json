@@ -1,12 +1,35 @@
 {
-  "pages":[
-    "pages/index/index",
-    "pages/logs/logs"
-  ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
-  }
+    "pages": [
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/college/college"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "WeChat",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "color": "#999",
+        "selectedColor": "blue",
+        "borderStyle": "#333",
+        "backgroundColor": "#fff",
+        "list": [{
+            "pagePath": "pages/index/index",
+            "iconPath": "images/shouye1.png",
+            "selectedIconPath": "images/shouye.png",
+            "text": "首页"
+        }, {
+            "pagePath": "pages/college/college",
+            "iconPath": "images/xueyuan1.png",
+            "selectedIconPath": "images/xueyuan.png",
+            "text": "学院"
+        }, {
+            "pagePath": "pages/logs/logs",
+            "iconPath": "images/mine1.png",
+            "selectedIconPath": "images/mine.png",
+            "text": "我的"
+        }]
+    }
 }

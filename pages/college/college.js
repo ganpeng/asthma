@@ -1,12 +1,7 @@
-//index.js
-//获取应用实例
-const url = '../college/college';
-
-
+const url = '../logs/logs';
 var app = getApp()
 Page({
   data: {
-    motto: '你好，微信小程序',
     userInfo: {}
   },
   //事件处理函数
