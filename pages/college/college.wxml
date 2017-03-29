@@ -1,11 +1,96 @@
-<!--index.wxml-->
 <view class="container">
-  <view  bindtap="bindViewTap" class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">college</text>
-    <text class="user-motto">college</text>
-  </view>
+    <view class="search-field-wrapper">
+        <view class="search-field">
+          <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" />
+          <image src="../../images/whiteBg.png" class="bg-image" />
+          <image src="../../images/seach.png" class="search-btn"/>
+        </view>
+        <view class="search-submit-btn">
+            搜索
+        </view>
+    </view>
+    <view class="college-group-wrapper">
+        <view class="college-group-title">
+            学组：
+        </view>
+        <view class="college-group-list">
+            <view class="college-group-item">
+                小肠学组
+            </view>
+            <view class="college-group-item">
+                静脉曲张学组
+            </view>
+            <view class="college-group-item">
+                小肠学组
+            </view>
+            <view class="college-group-item">
+                静脉曲张学组
+            </view>
+            <view class="college-group-item">
+                小肠学组
+            </view>
+            <view class="college-group-item">
+                静脉曲张学组
+            </view>
+            <view class="college-group-item">
+                小肠学组
+            </view>
+            <view class="college-group-item">
+                静脉曲张学组
+            </view>
+        </view>
+    </view>
+    <view class="course-content">
+        <view class="course-item">
+            <view class="course-image-wrapper">
+                <image class="course-image" src="../../images/kecheng.jpg" />
+            </view>
+            <view class="course-info">
+                <view class="course-name">课程1</view>
+                <view class="course-group">学组: 消化内镜学组</view>
+                <view class="course-status">
+                    <view class="course-rating">
+                        评分: 4.3
+                    </view>
+                    <view class="course-study-num">
+                        1人学习过
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="course-item">
+            <view class="course-image-wrapper">
+                <image class="course-image" src="../../images/kecheng.jpg" />
+            </view>
+            <view class="course-info">
+                <view class="course-name">课程1</view>
+                <view class="course-group">学组: 消化内镜学组</view>
+                <view class="course-status">
+                    <view class="course-rating">
+                        评分: 4.3
+                    </view>
+                    <view class="course-study-num">
+                        1人学习过
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="course-item">
+            <view class="course-image-wrapper">
+                <image class="course-image" src="../../images/kecheng.jpg" />
+            </view>
+            <view class="course-info">
+                <view class="course-name">课程1</view>
+                <view class="course-group">学组: 消化内镜学组</view>
+                <view class="course-status">
+                    <view class="course-rating">
+                        评分: 4.3
+                    </view>
+                    <view class="course-study-num">
+                        1人学习过
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
 </view>

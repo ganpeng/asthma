@@ -89,12 +89,11 @@
         <view class="course-title-wrapper">
             <image class="course-title-image" src="../../images/jingpin.png" />
             <view class="course-title">
-                精品课程
+                精品课件
             </view>
         </view>
         <view class="course-more-wrapper">
             <view class="course-more">
-                更多>>
             </view>
         </view>
     </view>
@@ -106,14 +105,6 @@
             <view class="course-info">
                 <view class="course-name">课程1</view>
                 <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
-                    </view>
-                    <view class="course-study-num">
-                        1人学习过
-                    </view>
-                </view>
             </view>
         </view>
         <view class="course-item">
@@ -123,14 +114,6 @@
             <view class="course-info">
                 <view class="course-name">课程1</view>
                 <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
-                    </view>
-                    <view class="course-study-num">
-                        1人学习过
-                    </view>
-                </view>
             </view>
         </view>
         <view class="course-item">
@@ -140,14 +123,6 @@
             <view class="course-info">
                 <view class="course-name">课程1</view>
                 <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
-                    </view>
-                    <view class="course-study-num">
-                        1人学习过
-                    </view>
-                </view>
             </view>
         </view>
     </view>

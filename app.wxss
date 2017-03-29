@@ -10,3 +10,90 @@
     height: 20rpx;
     background-color: #eeeeee;
 }
+
+
+
+/*
+    搜索框组件
+ */
+.search-field {
+  position: absolute;
+  top: 40rpx;
+  left: 40rpx;
+  right: 40rpx;
+  height: 80rpx;
+  border-radius:16rpx;
+}
+
+.bg-image {
+  position:absolute;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  width: 100%;
+  height: 80rpx;
+  border-radius:16rpx;
+}
+
+.search-field input {
+  padding-left: 80rpx;
+  height: 80rpx;
+}
+.search-field .search-btn {
+  position: absolute;
+  top:50%;
+  left: 20rpx;
+  transform: translateY(-50%);
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/*
+    课程样式
+ */
+
+
+.course-item {
+    display: flex;
+    padding: 32rpx;
+    border-bottom: 1px solid #dcdcdc;
+    background-color: #fff;
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-image-wrapper {
+    margin-right: 20rpx;
+}
+
+.course-image-wrapper,
+.course-image {
+    width:240rpx;
+    height:144rpx;
+}
+
+.course-name {
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
+    font-weight: 700;
+    color: #000;
+}
+
+.course-group {
+    color: #8c8c8c;
+    font-size: 28rpx;
+}
+
+.course-status {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    color: #8c8c8c;
+    margin-top: 20rpx;
+}
+
+.course-study-num {
+    color: #399aff;
+}
