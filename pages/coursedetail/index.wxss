@@ -38,3 +38,45 @@
 	color: #666;
 	font-size: 28rpx;
 }
+
+
+/*
+	课件
+ */
+
+.courseware-list {
+
+}
+
+.courseware-item {
+	display: flex;
+	padding: 32rpx;
+	justify-content: space-between;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+.courseware-info {
+
+}
+.courseware-name {
+	color: #000;
+	font-weight: 700;
+	font-size: 28rpx;
+	margin-bottom: 12rpx;
+}
+
+.courseware-teacher {
+	color: #999;
+	font-size: 28rpx;
+}
+
+.courseware-study-btn {
+	display:inline-block;
+	font-size: 28rpx;
+	height: 60rpx;
+	line-height: 60rpx;
+	padding: 0 30rpx;
+	border-radius: 60rpx;
+	color: #fff;
+	background-color: #4593f8;
+}

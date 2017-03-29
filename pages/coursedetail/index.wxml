@@ -33,7 +33,34 @@
 				</view>
             </swiper-item>
             <swiper-item>
-				<view>hehe</view>
+				<view class="courseware-list">
+					<view class="courseware-item">
+						<view class="courseware-info">
+							<view class="courseware-name">
+								课件：饮食卫生
+							</view>
+							<view class="courseware-teacher">
+								讲师：刘小娟 (北大医院)
+							</view>
+						</view>
+						<view class="courseware-study-btn">
+							进入学习
+						</view>
+					</view>
+					<view class="courseware-item">
+						<view class="courseware-info">
+							<view class="courseware-name">
+								课件：饮食卫生
+							</view>
+							<view class="courseware-teacher">
+								讲师：刘小娟 (北大医院)
+							</view>
+						</view>
+						<view class="courseware-study-btn">
+							进入学习
+						</view>
+					</view>
+				</view>
             </swiper-item>
             <swiper-item>
 				<view>hoho</view>
