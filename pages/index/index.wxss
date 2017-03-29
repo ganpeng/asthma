@@ -43,25 +43,79 @@
   height: 40rpx;
 }
 
-
-
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.course-header {
+    display: flex;
+    width:100%;
+    height: 100rpx;
+    padding: 0 40rpx;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dcdcdc;
+    box-sizing: border-box;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.course-title-wrapper,
+.course-more-wrapper {
+    display:flex;
+    align-items: center;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.course-title {
+    color: #676767;
+    font-size: 32rpx;
+    margin-left: 10rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.course-title-image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.course-more {
+    font-size: 28rpx;
+    color: #b0b0b0;
+}
+
+.course-item {
+    display: flex;
+    padding: 32rpx;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-image-wrapper {
+    margin-right: 20rpx;
+}
+
+.course-image-wrapper,
+.course-image {
+    width:240rpx;
+    height:144rpx;
+}
+
+.course-name {
+    font-size: 32rpx;
+    margin-bottom: 20rpx;
+    font-weight: 700;
+    color: #000;
+}
+
+.course-group {
+    color: #8c8c8c;
+    font-size: 28rpx;
+}
+
+.course-status {
+    display: flex;
+    justify-content: space-between;
+    font-size: 28rpx;
+    color: #8c8c8c;
+    margin-top: 20rpx;
+}
+
+.course-study-num {
+    color: #399aff;
 }
