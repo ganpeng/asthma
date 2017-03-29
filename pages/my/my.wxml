@@ -1,0 +1,87 @@
+<view class="container">
+    <view class="userinfo">
+        <view class="user-avatar-wrapper">
+            <image class="user-avatar" src="{{userInfo.avatarUrl}}" />
+        </view>
+        <view class="user-nickname">{{userInfo.nickName}}, 您好</view>
+    </view>
+    <view class="tab-wrapper">
+        <view class="swiper-tab">
+            <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">我的课程</view>
+            <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">绑定学习卡</view>
+        </view>
+        <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+            <swiper-item>
+                <view class="course-content">
+                    <view class="course-item">
+                        <view class="course-image-wrapper">
+                            <image class="course-image" src="../../images/kecheng.jpg" />
+                        </view>
+                        <view class="course-info">
+                            <view class="course-name">课程1</view>
+                            <view class="course-group">学组: 消化内镜学组</view>
+                        </view>
+                    </view>
+                    <view class="course-item">
+                        <view class="course-image-wrapper">
+                            <image class="course-image" src="../../images/kecheng.jpg" />
+                        </view>
+                        <view class="course-info">
+                            <view class="course-name">课程1</view>
+                            <view class="course-group">学组: 消化内镜学组</view>
+                        </view>
+                    </view>
+                    <view class="course-item">
+                        <view class="course-image-wrapper">
+                            <image class="course-image" src="../../images/kecheng.jpg" />
+                        </view>
+                        <view class="course-info">
+                            <view class="course-name">课程1</view>
+                            <view class="course-group">学组: 消化内镜学组</view>
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+            <swiper-item>
+                <view class="bind-card-wrapper">
+                    <view class="bind-card-btn">
+                        绑定学习卡+
+                    </view>
+                    <view class="binded-cards-title">绑卡记录</view>
+                    <view class="binded-cards-list">
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                        <view class="binded-card-item">
+                            2017-03-28 12:57:34 绑定 "<view class="binded-card-name">test2学习卡</view>" 学习卡
+                        </view>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+</view>

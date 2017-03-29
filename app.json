@@ -1,8 +1,9 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs",
-        "pages/college/college"
+        "pages/my/my",
+        "pages/college/college",
+        "pages/coursedetail/index"
     ],
     "window": {
         "backgroundTextStyle": "light",
@@ -21,12 +22,12 @@
             "selectedIconPath": "images/shouye.png",
             "text": "首页"
         }, {
-            "pagePath": "pages/college/college",
+            "pagePath": "pages/coursedetail/index",
             "iconPath": "images/xueyuan1.png",
             "selectedIconPath": "images/xueyuan.png",
             "text": "学院"
         }, {
-            "pagePath": "pages/logs/logs",
+            "pagePath": "pages/my/my",
             "iconPath": "images/mine1.png",
             "selectedIconPath": "images/mine.png",
             "text": "我的"

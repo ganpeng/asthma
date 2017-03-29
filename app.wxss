@@ -97,3 +97,38 @@
 .course-study-num {
     color: #399aff;
 }
+
+
+
+/*
+    选项卡切换
+ */
+
+.swiper-tab{
+    width: 100%;
+    text-align: center;
+    line-height: 80rpx;
+}
+.swiper-tab-list {
+    font-size: 30rpx;
+    display: inline-block;
+    width: 50%;
+    color: #777777;
+}
+.swiper-tab-list2 {
+    font-size: 30rpx;
+    display: inline-block;
+    width: 33.33%;
+    color: #777777;
+}
+.on {
+    color: #4593f8;
+    border-bottom: 5rpx solid #4593f8;
+}
+
+.swiper-box {
+    display: block;
+    height: 100%; 
+    width: 100%;
+    overflow: hidden;
+}

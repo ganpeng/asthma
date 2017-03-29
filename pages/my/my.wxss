@@ -1,0 +1,42 @@
+.userinfo {
+    display:flex;
+    align-items: center;
+    padding: 32rpx;
+}
+
+.user-avatar-wrapper,
+.user-avatar {
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+}
+
+.user-nickname {
+    flex: 1;
+    margin-left: 32rpx;
+}
+
+
+/*
+    绑定学习卡
+ */
+
+.bind-card-btn {
+    color: #4593f8;
+}
+
+
+.bind-card-btn,
+.binded-cards-title,
+.binded-card-item {
+    font-size: 26rpx;
+    padding: 0 32rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    border-bottom: 1px solid #999;
+}
+
+.binded-card-name {
+    display: inline;
+    color: #4593f8;
+}
