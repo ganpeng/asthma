@@ -48,6 +48,19 @@ Page({
               currentTab: e.target.dataset.current
           })
       }
+  },
+  changeStar(e) {
+      const starImages = [];
+      const index = e.target.dataset.gindex;
+      const that = this;
+      console.log(index);
+      for (let i = 0; i < 5; i++) {
+          if (i <= index) {
+              starImages.push(starActive);
+          } else {
+              starImages.push(star);
+          }
+      }
+      that.setData({starImages});
   }
-
 })
