@@ -147,7 +147,7 @@
 					<block class="star-list" wx:for="{{starImages}}">
 						<image class="star-item" data-gindex="{{index}}" src="{{item}}" bindtap="changeStar" />
 					</block>
-					<view class="star-rating-btn">确认</view>
+					<view class="star-rating-btn" bindtap="submitRating">确认</view>
 				</view>
             </swiper-item>
         </swiper>
