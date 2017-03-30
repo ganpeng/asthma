@@ -10,9 +10,9 @@
       </block>
     </swiper>
     <view class="search-field">
-      <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" />
+      <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" bindinput="bindKeyInput" />
       <image src="../../images/whiteBg.png" class="bg-image" />
-      <image src="../../images/seach.png" class="search-btn"/>
+      <image src="../../images/seach.png" class="search-btn" bindtap="submitSearch" />
     </view>
   </view>
   <view class="course-list">
@@ -24,7 +24,7 @@
             </view>
         </view>
         <view class="course-more-wrapper">
-            <view class="course-more">
+            <view class="course-more" bindtap="gotoCollege">
                 更多>>
             </view>
         </view>

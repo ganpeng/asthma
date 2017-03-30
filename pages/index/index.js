@@ -14,7 +14,8 @@ Page({
         autoplay: true,
         interval: 3000,
         duration: 1000,
-        circular: true
+        circular: true,
+        searchInputValue: ""
     },
     //事件处理函数
     bindViewTap() {
@@ -46,5 +47,22 @@ Page({
         wx.navigateTo({
             url: "../coursedetail/index?_id=5"
         });
+    },
+
+    bindKeyInput(e) {
+        const that = this;
+        that.setData({
+            searchInputValue: e.detail.value
+        });
+    },
+
+    submitSearch() {
+        console.log(this.data.searchInputValue);
+    },
+
+    gotoCollege() {
+        wx.switchTab({
+            url: "../college/college"
+        })
     }
 })
