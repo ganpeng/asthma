@@ -70,7 +70,8 @@
 	font-size: 28rpx;
 }
 
-.courseware-study-btn {
+.courseware-study-btn,
+.star-rating-btn {
 	display:inline-block;
 	font-size: 28rpx;
 	height: 60rpx;
@@ -79,4 +80,40 @@
 	border-radius: 60rpx;
 	color: #fff;
 	background-color: #4593f8;
+}
+
+
+/*
+	评分
+ */
+
+
+.star-rating {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.star-list {
+	position: absolute;
+	top: 100rpx;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow:hidden;
+}
+
+.star-item {
+	float:left;
+	width: 60rpx;
+	height: 60rpx;
+	margin-right: 10rpx;
+}
+
+.star-rating-btn {
+	position: absolute;
+	top: 220rpx;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
