@@ -9,8 +9,8 @@
         </swiper-item>
       </block>
     </swiper>
-    <view class="search-field">
-      <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" bindinput="bindKeyInput" />
+    <view class="search-field" bindtap="gotoCollege">
+      <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" disabled="true" bindinput="bindKeyInput" />
       <image src="../../images/whiteBg.png" class="bg-image" />
       <image src="../../images/seach.png" class="search-btn" bindtap="submitSearch" />
     </view>
