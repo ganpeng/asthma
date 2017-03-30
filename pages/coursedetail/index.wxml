@@ -144,13 +144,9 @@
             </swiper-item>
             <swiper-item>
 				<view class="star-rating">
-					<view class="star-list">
-						<image class="star-item" src="../../images/star_gan.png" />
-						<image class="star-item" src="../../images/star_gan.png" />
-						<image class="star-item" src="../../images/star_gan.png" />
-						<image class="star-item" src="../../images/star_gan.png" />
-						<image class="star-item" src="../../images/star_gan.png" />
-					</view>
+					<block class="star-list" wx:for="{{starImages}}">
+						<image class="star-item" data-gindex="{{index}}" src="{{item}}" />
+					</block>
 					<view class="star-rating-btn">确认</view>
 				</view>
             </swiper-item>

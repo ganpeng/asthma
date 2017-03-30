@@ -1,7 +1,11 @@
+const star = '../../images/star_gan.png';
+const starActive = '../../images/star_gan_active.png';
+
 var app = getApp()
 Page({
   data: {
     userInfo: {},
+    starImages: [],
     // 页面的宽高属性
     winWidth: 0,
     winHeight: 0,
@@ -9,6 +13,9 @@ Page({
     currentTab: 0,
   },
   onLoad: function () {
+
+      this.setImages();
+
       wx.pro.getSystemInfo()
         .then((res) => {
             this.setData( {
@@ -19,6 +26,13 @@ Page({
         .catch((err) => {
             console.log(err);
         })
+  },
+  setImages() {
+      const starImages = [];
+      for (let i = 0; i < 5; i++) {
+          starImages.push(star);
+      }
+      this.setData({starImages});
   },
   bindChange(e) {
       const that = this;

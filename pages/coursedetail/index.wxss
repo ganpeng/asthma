@@ -89,18 +89,11 @@
 
 
 .star-rating {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
+	display:flex;
+	justify-content: center;
 }
 
 .star-list {
-	position: absolute;
-	top: 100rpx;
-	left: 50%;
-	transform: translate(-50%, -50%);
 	overflow:hidden;
 }
 
@@ -109,11 +102,10 @@
 	width: 60rpx;
 	height: 60rpx;
 	margin-right: 10rpx;
+	margin-top: 80rpx;
 }
 
 .star-rating-btn {
-	position: absolute;
-	top: 220rpx;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position:absolute;
+	top: 180rpx;
 }
