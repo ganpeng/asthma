@@ -30,7 +30,7 @@
         </view>
     </view>
     <view class="course-content">
-        <view class="course-item">
+        <view class="course-item" bindtap="gotoDetail">
             <view class="course-image-wrapper">
                 <image class="course-image" src="../../images/kecheng.jpg" />
             </view>

@@ -22,7 +22,7 @@
             "selectedIconPath": "images/shouye.png",
             "text": "首页"
         }, {
-            "pagePath": "pages/coursedetail/index",
+            "pagePath": "pages/college/college",
             "iconPath": "images/xueyuan1.png",
             "selectedIconPath": "images/xueyuan.png",
             "text": "学院"

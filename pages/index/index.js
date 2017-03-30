@@ -39,6 +39,12 @@ Page({
         }).catch((err) => {
             console.log(err);
         })
+    },
 
+    gotoDetail(e) {
+        const that = this;
+        wx.navigateTo({
+            url: "../coursedetail/index?_id=5"
+        });
     }
 })

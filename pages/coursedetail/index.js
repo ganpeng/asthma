@@ -12,10 +12,11 @@ Page({
         // tab切换
         currentTab: 0
     },
-    onLoad: function() {
+    onLoad: function(option) {
 
+        console.log(option._id);
+        
         this.setImages();
-
         wx.pro.getSystemInfo().then((res) => {
             this.setData({winWidth: res.windowWidth, winHeight: res.windowHeight});
         }).catch((err) => {
