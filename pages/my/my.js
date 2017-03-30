@@ -8,6 +8,7 @@ Page({
     winHeight: 0,
     // tab切换
     currentTab: 0,
+    dialogStatus: "none"
   },
   onLoad: function () {
       wx.pro.getSystemInfo()
@@ -44,5 +45,19 @@ Page({
               currentTab: e.target.dataset.current
           })
       }
+  },
+
+  closeDialogHandle() {
+      const that = this;
+      that.setData({
+          dialogStatus: "none"
+      });
+  },
+
+  showDialogHandle() {
+      const that = this;
+      that.setData({
+          dialogStatus: "block"
+      });
   }
 })

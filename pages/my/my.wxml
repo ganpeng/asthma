@@ -100,7 +100,7 @@
             </swiper-item>
             <swiper-item>
                 <view class="bind-card-wrapper">
-                    <view class="bind-card-btn">
+                    <view class="bind-card-btn" bindtap="showDialogHandle">
                         绑定学习卡+
                     </view>
                     <scroll-view scroll-y="true" style="height: {{winHeight - 100}}px;">
@@ -159,5 +159,22 @@
                 </view>
             </swiper-item>
         </swiper>
+    </view>
+    <view class="dialog-wrapper" style="display: {{dialogStatus}}">
+        <view class="dialog">
+            <view class="dialog-header">
+                <view class="dialog-title">
+                    请输入学习卡号
+                </view>
+                <image class="close-btn" src="../../images/close.png" bindtap="closeDialogHandle"/>
+            </view>
+            <view class="dialog-content">
+                <input />
+            </view>
+            <view class="dialog-footer">
+                <view class="cancel-btn" bindtap="closeDialogHandle">取消</view>
+                <view class="enter-btn">确认</view>
+            </view>
+        </view>
     </view>
 </view>
