@@ -1,52 +1,56 @@
-const apiUrl = 'https://api.douban.com/v2/book/1220562';
-
-const url = '../college/college';
-
 const app = getApp();
+const { apiRoot, banner, qulityVideo, recommendedCourse } = require('../../utils/api');
 
 Page({
     data: {
-        userInfo: {},
-        imgUrls: [
-            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg', 'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg', 'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-        ],
+        apiRoot,
         indicatorDots: false,
         autoplay: true,
         interval: 3000,
         duration: 1000,
         circular: true,
-        searchInputValue: ""
+        banners:[],
+        qulityVideos: [],
+        recommendedCourses: []
     },
-    //事件处理函数
-    bindViewTap() {
-        wx.navigateTo({url})
-    },
-    onLoad: function() {
+    onLoad() {
         var that = this
-        //调用应用实例的方法获取全局数据
-        app.getUserInfo(function(userInfo) {
-            //更新数据
-            that.setData({userInfo: userInfo})
-        })
-
         wx.pro.request({
-            url: apiUrl,
+            url: banner,
             method: "GET",
             header: {
                 'content-type': 'application/json'
             }
         }).then((data) => {
-            console.log(data);
+            that.setData({banners: data.banners});
         }).catch((err) => {
             console.log(err);
         })
-    },
 
-    gotoDetail(e) {
-        const that = this;
-        wx.navigateTo({
-            url: "../coursedetail/index?_id=5"
-        });
+        wx.pro.request({
+            url: qulityVideo,
+            method: "GET",
+            header: {
+                'content-type': 'application/json'
+            }
+        }).then((data) => {
+            that.setData({qulityVideos: data.videos});
+        }).catch((err) => {
+            console.log(err);
+        })
+
+        wx.pro.request({
+            url: recommendedCourse,
+            method: "GET",
+            header: {
+                'content-type': 'application/json'
+            }
+        }).then((data) => {
+            that.setData({recommendedCourses: data.recommendedCourses});
+        }).catch((err) => {
+            console.log(err);
+        })
+
     },
 
     bindKeyInput(e) {

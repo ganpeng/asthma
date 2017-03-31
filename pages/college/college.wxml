@@ -14,30 +14,11 @@
             学组：
         </view>
         <view class="college-group-list">
-            <view class="college-group-item">
-                小肠学组
-            </view>
-            <view class="college-group-item">
-                静脉曲张学组
-            </view>
-            <view class="college-group-item">
-                小肠学组
-            </view>
-            <view class="college-group-item">
-                静脉曲张学组
-            </view>
-            <view class="college-group-item">
-                小肠学组
-            </view>
-            <view class="college-group-item">
-                静脉曲张学组
-            </view>
-            <view class="college-group-item">
-                小肠学组
-            </view>
-            <view class="college-group-item">
-                静脉曲张学组
-            </view>
+            <block wx:for="{{specializedObjs}}">
+                <view class="college-group-item {{item.active ? 'active' : ''}}" data-index="{{index}}" bindtap="toggleActive">
+                    {{item.name}}
+                </view>
+            </block>
         </view>
     </view>
     <view class="course-content">

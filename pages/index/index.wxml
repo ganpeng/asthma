@@ -3,9 +3,9 @@
   <view class="swiper-container">
     <swiper indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  circular="{{circular}}">
-      <block wx:for="{{imgUrls}}">
+      <block wx:for="{{banners}}">
         <swiper-item>
-          <image src="{{item}}" class="slide-image"/>
+          <image src="{{apiRoot}}/images/{{item.url}}" class="slide-image"/>
         </swiper-item>
       </block>
     </swiper>
@@ -30,57 +30,27 @@
         </view>
     </view>
     <view class="course-content">
-        <view class="course-item" bindtap="gotoDetail">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
+        <block wx:for="{{recommendedCourses}}">
+            <navigator url="../coursedetail/index?id={{item._id}}">
+                <view class="course-item">
+                    <view class="course-image-wrapper">
+                        <image class="course-image" src="../../images/kecheng.jpg" />
                     </view>
-                    <view class="course-study-num">
-                        1人学习过
-                    </view>
-                </view>
-            </view>
-        </view>
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
-                    </view>
-                    <view class="course-study-num">
-                        1人学习过
+                    <view class="course-info">
+                        <view class="course-name">{{item.name}}</view>
+                        <view class="course-group">学组: {{item.specialObj}}</view>
+                        <view class="course-status">
+                            <view class="course-rating">
+                                评分: {{item.averageScore ? item.averageScore : 0}}
+                            </view>
+                            <view class="course-study-num">
+                                {{item.count ? item.count : 0}}人学习过
+                            </view>
+                        </view>
                     </view>
                 </view>
-            </view>
-        </view>
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
-                    </view>
-                    <view class="course-study-num">
-                        1人学习过
-                    </view>
-                </view>
-            </view>
-        </view>
+            </navigator>
+        </block>
     </view>
   </view>
   <view class="seperator-line"></view>
@@ -98,33 +68,17 @@
         </view>
     </view>
     <view class="course-content">
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
+        <block wx:for="{{qulityVideos}}">
+            <view class="course-item">
+                <view class="course-image-wrapper">
+                    <image class="course-image" src="../../images/kecheng.jpg" />
+                </view>
+                <view class="course-info">
+                    <view class="course-name">{{item.name}}</view>
+                    <view class="course-group">学组: {{item.specialObj}}</view>
+                </view>
             </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-            </view>
-        </view>
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-            </view>
-        </view>
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-            </view>
-        </view>
+        </block>
     </view>
   </view>
 </view>

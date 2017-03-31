@@ -30,7 +30,7 @@ page {
  */
 
 .college-group-wrapper {
-    display: flex;
+    overflow:hidden;
     background-color: #fff;
     padding: 32rpx;
     font-size: 28rpx;
@@ -39,7 +39,12 @@ page {
 }
 
 .college-group-title {
-    width: 260rpx;
+    float:left;
+    width: 100rpx;
+}
+
+.college-group-list {
+    overflow:hidden;
 }
 
 
@@ -48,4 +53,8 @@ page {
     display: inline-block;
     margin-right: 40rpx;
     margin-bottom: 20rpx;
+}
+
+.college-group-item.active {
+    color: #4593f8;
 }

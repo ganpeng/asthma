@@ -2,13 +2,13 @@
 	<view class="course-basic-info">
 		<view class="course-info-text">
 			<view class="course-name">
-				 课程名字
+				{{course.name}}
 			</view>
 			<view class="course-type">
-				分类: 是这种
+				分类: {{course.category}}
 			</view>
 			<view class="course-group">
-				学组：结直肠学组
+				学组：{{course.specialObj}}
 			</view>
 		</view>
 		<view class="course-image">
@@ -29,116 +29,27 @@
         <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 200}}px" bindchange="bindChange">
             <swiper-item>
 				<view class="course-summary">
-					这是这个课程的简介
+					{{course.content}}
 				</view>
             </swiper-item>
             <swiper-item>
 				<scroll-view scroll-y="true" style="height:{{winHeight - 200}}px">
 					<view class="courseware-list">
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
+					    <block wx:for="{{course.courseware}}">
+							<view class="courseware-item">
+								<view class="courseware-info">
+									<view class="courseware-name">
+										课件：{{item.name}}
+									</view>
+									<view class="courseware-teacher">
+										讲师：{{item.teacher}}
+									</view>
 								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
-								</view>
-							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
-								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
+								<view class="courseware-study-btn">
+									进入学习
 								</view>
 							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
-								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
-								</view>
-							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
-								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
-								</view>
-							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
-								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
-								</view>
-							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
-								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
-								</view>
-							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
-								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
-								</view>
-							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
-						<view class="courseware-item">
-							<view class="courseware-info">
-								<view class="courseware-name">
-									课件：饮食卫生
-								</view>
-								<view class="courseware-teacher">
-									讲师：刘小娟 (北大医院)
-								</view>
-							</view>
-							<view class="courseware-study-btn">
-								进入学习
-							</view>
-						</view>
+					    </block>
 					</view>
 				</scroll-view>
             </swiper-item>

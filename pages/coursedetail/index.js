@@ -1,27 +1,40 @@
+const app = getApp()
+
+const { courseDetail } = require('../../utils/api');
 const star = '../../images/star_gan.png';
 const starActive = '../../images/star_gan_active.png';
 
-var app = getApp()
 Page({
     data: {
-        userInfo: {},
         starImages: [],
         // 页面的宽高属性
         winWidth: 0,
         winHeight: 0,
         // tab切换
-        currentTab: 0
+        currentTab: 0,
+        course: {}
     },
     onLoad: function(option) {
-
-        console.log(option._id);
-        
+        const that = this;
         this.setImages();
         wx.pro.getSystemInfo().then((res) => {
             this.setData({winWidth: res.windowWidth, winHeight: res.windowHeight});
         }).catch((err) => {
             console.log(err);
         })
+
+        wx.pro.request({
+            url: courseDetail(option.id),
+            method: "GET",
+            header: {
+                'content-type': 'application/json'
+            }
+        }).then((data) => {
+            that.setData({course: data.course});
+        }).catch((err) => {
+            console.log(err);
+        })
+
     },
     setImages() {
         const starImages = [];
