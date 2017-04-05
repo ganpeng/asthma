@@ -1,0 +1,12 @@
+var mongoose = require("./db");
+var Wxbanner = mongoose.model('wxbanners', {
+    status: Number, //是否发布1-已发布；0-未发布
+    createDate: Date,
+    modifyDate: Date,
+    url: String, //图片链接地址
+    img: String, //图片地址
+    publishDate: Date, //发布时间
+    title: String, //图片标题
+});
+
+module.exports = Wxbanner;
