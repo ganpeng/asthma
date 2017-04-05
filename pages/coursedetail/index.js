@@ -74,5 +74,10 @@ Page({
         const that = this;
         const rating = that.data.starImages.filter((image) => image === starActive).length;
         console.log(rating);
+    },
+    playVideo() {
+        wx.navigateTo({
+            url: '../videoplayer/index'
+        });
     }
 })

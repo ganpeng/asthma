@@ -16,7 +16,7 @@
 		</view>
 	</view>
 	<view class="study-course-btn-wrapper">
-		<view class="study-course-btn">
+		<view class="study-course-btn" bindtap="playVideo">
 			学习课程
 		</view>
 	</view>
@@ -45,7 +45,7 @@
 										讲师：{{item.teacher}}
 									</view>
 								</view>
-								<view class="courseware-study-btn">
+								<view class="courseware-study-btn" >
 									进入学习
 								</view>
 							</view>

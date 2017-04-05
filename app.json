@@ -3,7 +3,8 @@
         "pages/index/index",
         "pages/my/my",
         "pages/college/college",
-        "pages/coursedetail/index"
+        "pages/coursedetail/index",
+        "pages/videoplayer/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

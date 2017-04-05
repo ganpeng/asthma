@@ -1,0 +1,6 @@
+.container {
+	display: flex;
+	background-color: #000;
+	justify-content: center;
+	align-items: center;
+}

@@ -1,0 +1,3 @@
+<view class="container" style="width: {{winWidth}}px; height: {{winHeight}}px;">
+  <video src="{{src}}" controls  class="video-style" style="width: {{winWidth}}px"></video>
+</view>
