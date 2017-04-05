@@ -75,9 +75,25 @@ Page({
         const rating = that.data.starImages.filter((image) => image === starActive).length;
         console.log(rating);
     },
-    playVideo() {
-        wx.navigateTo({
-            url: '../videoplayer/index'
-        });
+    playFirstVideo() {
+        const that = this;
+        const course = that.data.course.courseware[0];
+        if (course && course.videoUrl) {
+            wx.navigateTo({
+                url: `../videoplayer/index?videoUrl=${course.videoUrl}`
+            });
+        }
+    },
+    playVideo(e) {
+        const that = this;
+        const index = e.target.dataset.index;
+        const { courseware } = that.data.course;
+        console.log(index);
+        console.log(courseware);
+        if (courseware[index] && courseware[index].videoUrl) {
+            wx.navigateTo({
+                url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`
+            });
+        }
     }
 })
