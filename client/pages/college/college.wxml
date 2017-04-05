@@ -14,7 +14,7 @@
             学组：
         </view>
         <view class="college-group-list">
-            <block wx:for="{{specializedObjs}}">
+            <block wx:for="{{specializedObjs}}" wx:key="{{index}}">
                 <view class="college-group-item {{item.active ? 'active' : ''}}" data-index="{{index}}" bindtap="toggleActive">
                     {{item.name}}
                 </view>
@@ -22,7 +22,7 @@
         </view>
     </view>
     <view class="course-content">
-        <block wx:for="{{searchList}}">
+        <block wx:for="{{searchList}}" wx:key="{{index}}">
             <navigator url="../coursedetail/index?id={{item._id}}">
                 <view class="course-item">
                     <view class="course-image-wrapper">

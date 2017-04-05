@@ -3,7 +3,7 @@
   <view class="swiper-container">
     <swiper indicator-dots="{{indicatorDots}}"
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  circular="{{circular}}">
-      <block wx:for="{{banners}}">
+      <block wx:for="{{banners}}" wx:key="{{index}}">
         <swiper-item>
           <image src="{{apiRoot}}/images/{{item.url}}" class="slide-image"/>
         </swiper-item>
@@ -30,7 +30,7 @@
         </view>
     </view>
     <view class="course-content">
-        <block wx:for="{{recommendedCourses}}">
+        <block wx:for="{{recommendedCourses}}" wx:key="{{index}}">
             <navigator url="../coursedetail/index?id={{item._id}}">
                 <view class="course-item">
                     <view class="course-image-wrapper">
@@ -68,7 +68,7 @@
         </view>
     </view>
     <view class="course-content">
-        <block wx:for="{{qulityVideos}}">
+        <block wx:for="{{qulityVideos}}" wx:key="{{index}}">
             <view class="course-item">
                 <view class="course-image-wrapper">
                     <image class="course-image" src="../../images/kecheng.jpg" />

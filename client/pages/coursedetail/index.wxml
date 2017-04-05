@@ -35,7 +35,7 @@
             <swiper-item>
 				<scroll-view scroll-y="true" style="height:{{winHeight - 200}}px">
 					<view class="courseware-list">
-					    <block wx:for="{{course.courseware}}">
+					    <block wx:for="{{course.courseware}}" wx:key="{{index}}">
 							<view class="courseware-item">
 								<view class="courseware-info">
 									<view class="courseware-name">
@@ -55,7 +55,7 @@
             </swiper-item>
             <swiper-item>
 				<view class="star-rating">
-					<block class="star-list" wx:for="{{starImages}}">
+					<block class="star-list" wx:for="{{starImages}}" wx:key="{{index}}">
 						<image class="star-item" data-gindex="{{index}}" src="{{item}}" bindtap="changeStar" />
 					</block>
 					<view class="star-rating-btn" bindtap="submitRating">确认</view>
