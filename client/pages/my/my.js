@@ -24,6 +24,7 @@ Page({
 
     wx.pro.getUserInfo()
         .then((res) => {
+            console.log(res);
             this.setData({ userInfo: res.userInfo });
         })
         .catch((err) => {
