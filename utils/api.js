@@ -11,5 +11,6 @@ module.exports = {
 	qulityVideo: `${apiRoot}/video/qulityvideo`,
 	recommendedCourse: `${apiRoot}/course/recommendedcourse`,
 	courseDetail : courseDetailApi,
-	getAllSpecializedObj: `${apiRoot}/specializedObj/all`
+	getAllSpecializedObj: `${apiRoot}/specializedObj/all`,
+	searchCourse: `${apiRoot}/search/course`
 }

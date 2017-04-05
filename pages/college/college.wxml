@@ -1,11 +1,11 @@
 <view class="container">
     <view class="search-field-wrapper">
         <view class="search-field">
-          <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" focus="{{true}}" />
+          <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" focus="{{true}}" bindinput="bindKeyInput"/>
           <image src="../../images/whiteBg.png" class="bg-image" />
           <image src="../../images/seach.png" class="search-btn"/>
         </view>
-        <view class="search-submit-btn">
+        <view class="search-submit-btn" bindtap="submitSearch">
             搜索
         </view>
     </view>
@@ -22,56 +22,26 @@
         </view>
     </view>
     <view class="course-content">
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
+        <block wx:for="{{searchList}}">
+            <navigator url="../coursedetail/index?id={{item._id}}">
+                <view class="course-item">
+                    <view class="course-image-wrapper">
+                        <image class="course-image" src="../../images/kecheng.jpg" />
                     </view>
-                    <view class="course-study-num">
-                        1人学习过
-                    </view>
-                </view>
-            </view>
-        </view>
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
-                    </view>
-                    <view class="course-study-num">
-                        1人学习过
+                    <view class="course-info">
+                        <view class="course-name">{{item.name}}</view>
+                        <view class="course-group">学组: {{item.specialObj}}</view>
+                        <view class="course-status">
+                            <view class="course-rating">
+                                评分: {{item.averageScore ? item.averageScore : 0}}
+                            </view>
+                            <view class="course-study-num">
+                                {{item.count ? item.count : 0}}人学习过
+                            </view>
+                        </view>
                     </view>
                 </view>
-            </view>
-        </view>
-        <view class="course-item">
-            <view class="course-image-wrapper">
-                <image class="course-image" src="../../images/kecheng.jpg" />
-            </view>
-            <view class="course-info">
-                <view class="course-name">课程1</view>
-                <view class="course-group">学组: 消化内镜学组</view>
-                <view class="course-status">
-                    <view class="course-rating">
-                        评分: 4.3
-                    </view>
-                    <view class="course-study-num">
-                        1人学习过
-                    </view>
-                </view>
-            </view>
-        </view>
+            </navigator>
+        </block>
     </view>
 </view>

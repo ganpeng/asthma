@@ -53,17 +53,6 @@ Page({
 
     },
 
-    bindKeyInput(e) {
-        const that = this;
-        that.setData({
-            searchInputValue: e.detail.value
-        });
-    },
-
-    submitSearch() {
-        console.log(this.data.searchInputValue);
-    },
-
     gotoCollege() {
         wx.switchTab({
             url: "../college/college"
