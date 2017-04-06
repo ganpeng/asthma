@@ -1,6 +1,6 @@
 const app = getApp()
 
-const { courseDetail } = require('../../utils/api');
+const {courseDetail} = require('../../utils/api');
 const star = '../../images/star_gan.png';
 const starActive = '../../images/star_gan_active.png';
 
@@ -21,9 +21,7 @@ Page({
             this.setData({winWidth: res.windowWidth, winHeight: res.windowHeight});
         }).catch((err) => {
             console.log(err);
-        })
-
-        wx.pro.request({
+        })wx.pro.request({
             url: courseDetail(option.id),
             method: "GET",
             header: {
@@ -34,7 +32,6 @@ Page({
         }).catch((err) => {
             console.log(err);
         })
-
     },
     setImages() {
         const starImages = [];
@@ -69,7 +66,6 @@ Page({
         }
         that.setData({starImages});
     },
-
     submitRating() {
         const that = this;
         const rating = that.data.starImages.filter((image) => image === starActive).length;
@@ -79,19 +75,15 @@ Page({
         const that = this;
         const course = that.data.course.courseware[0];
         if (course && course.videoUrl) {
-            wx.navigateTo({
-                url: `../videoplayer/index?videoUrl=${course.videoUrl}`
-            });
+            wx.navigateTo({url: `../videoplayer/index?videoUrl=${course.videoUrl}`});
         }
     },
     playVideo(e) {
         const that = this;
         const index = e.target.dataset.index;
-        const { courseware } = that.data.course;
+        const {courseware} = that.data.course;
         if (courseware[index] && courseware[index].videoUrl) {
-            wx.navigateTo({
-                url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`
-            });
+            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`});
         }
     }
 })
