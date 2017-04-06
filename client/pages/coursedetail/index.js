@@ -88,8 +88,6 @@ Page({
         const that = this;
         const index = e.target.dataset.index;
         const { courseware } = that.data.course;
-        console.log(index);
-        console.log(courseware);
         if (courseware[index] && courseware[index].videoUrl) {
             wx.navigateTo({
                 url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`

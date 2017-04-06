@@ -68,15 +68,17 @@
     </view>
     <view class="course-content">
         <block wx:for="{{qulityVideos}}" wx:key="{{index}}">
-            <view class="course-item">
-                <view class="course-image-wrapper">
-                    <image class="course-image" src="../../images/kecheng.jpg" />
+            <navigator url="../videoplayer/index?videoUrl={{item.videoUrl}}">
+                <view class="course-item">
+                    <view class="course-image-wrapper">
+                        <image class="course-image" src="../../images/kecheng.jpg" />
+                    </view>
+                    <view class="course-info">
+                        <view class="course-name">{{item.name}}</view>
+                        <view class="course-group">学组: {{item.specialObj}}</view>
+                    </view>
                 </view>
-                <view class="course-info">
-                    <view class="course-name">{{item.name}}</view>
-                    <view class="course-group">学组: {{item.specialObj}}</view>
-                </view>
-            </view>
+            </navigator>
         </block>
     </view>
   </view>

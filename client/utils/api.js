@@ -1,4 +1,5 @@
-const apiRoot = 'http://192.168.0.163:1988';
+// const apiRoot = 'http://192.168.0.163:1988';
+const apiRoot = 'http://localhost:1988';
 
 function courseDetailApi(id) {
 	return `${apiRoot}/course/coursedetail/${id}`;

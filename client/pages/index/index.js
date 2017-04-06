@@ -1,5 +1,5 @@
 const app = getApp();
-const { apiRoot, banner, qulityVideo, recommendedCourse } = require('../../utils/api');
+const {apiRoot, banner, qulityVideo, recommendedCourse} = require('../../utils/api');
 
 Page({
     data: {
@@ -9,7 +9,7 @@ Page({
         interval: 3000,
         duration: 1000,
         circular: true,
-        banners:[],
+        banners: [],
         qulityVideos: [],
         recommendedCourses: []
     },
@@ -25,8 +25,7 @@ Page({
             that.setData({banners: data.banners});
         }).catch((err) => {
             console.log(err);
-        })
-
+        });
         wx.pro.request({
             url: qulityVideo,
             method: "GET",
@@ -37,8 +36,7 @@ Page({
             that.setData({qulityVideos: data.videos});
         }).catch((err) => {
             console.log(err);
-        })
-
+        });
         wx.pro.request({
             url: recommendedCourse,
             method: "GET",
@@ -49,13 +47,10 @@ Page({
             that.setData({recommendedCourses: data.recommendedCourses});
         }).catch((err) => {
             console.log(err);
-        })
+        });
 
     },
-
     gotoCollege() {
-        wx.switchTab({
-            url: "../college/college"
-        })
+        wx.switchTab({url: "../college/college"})
     }
 })
