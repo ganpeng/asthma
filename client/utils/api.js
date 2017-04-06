@@ -2,16 +2,15 @@
 const apiRoot = 'http://localhost:1988';
 
 function courseDetailApi(id) {
-	return `${apiRoot}/course/coursedetail/${id}`;
+    return `${apiRoot}/course/coursedetail/${id}`;
 }
 
-
 module.exports = {
-	apiRoot,
-	banner: `${apiRoot}/banner`,
-	qulityVideo: `${apiRoot}/video/qulityvideo`,
-	recommendedCourse: `${apiRoot}/course/recommendedcourse`,
-	courseDetail : courseDetailApi,
-	getAllSpecializedObj: `${apiRoot}/specializedObj/all`,
-	searchCourse: `${apiRoot}/search/course`
+    apiRoot,
+    banner: `${apiRoot}/banner`,
+    qulityVideo: `${apiRoot}/video/qulityvideo`,
+    recommendedCourse: `${apiRoot}/course/recommendedcourse`,
+    courseDetail: courseDetailApi,
+    getAllSpecializedObj: `${apiRoot}/specializedObj/all`,
+    searchCourse: `${apiRoot}/search/course`
 }

@@ -21,12 +21,9 @@ Page({
             this.setData({winWidth: res.windowWidth, winHeight: res.windowHeight});
         }).catch((err) => {
             console.log(err);
-        })wx.pro.request({
-            url: courseDetail(option.id),
-            method: "GET",
-            header: {
-                'content-type': 'application/json'
-            }
+        });
+        wx.pro.request({
+            url: courseDetail(option.id)
         }).then((data) => {
             that.setData({course: data.course});
         }).catch((err) => {
