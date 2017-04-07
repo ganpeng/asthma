@@ -10,6 +10,7 @@ Page({
 
 		const { videoUrl } = options;
 		this.setData({src: videoUrl});
+        console.log(videoUrl);
 
         wx.pro.getSystemInfo().then((res) => {
             this.setData({winWidth: res.windowWidth, winHeight: res.windowHeight});

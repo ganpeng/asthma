@@ -8,6 +8,13 @@ App({
         }).catch((err) => {
             console.log(err);
         });
+        wx.pro.getUserInfo()
+            .then((data) => {
+                console.log(data);
+            })
+            .catch((err) => {
+                console.log(err);
+            });
     },
     globalData: {
         userInfo: null

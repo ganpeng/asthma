@@ -41,7 +41,6 @@ Page({
         const that = this;
         that.setData({currentTab: e.detail.current});
     },
-
     switchNav(e) {
         const that = this;
         if (this.data.currentTab === e.target.dataset.current) {
