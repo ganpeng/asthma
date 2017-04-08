@@ -2,6 +2,7 @@
 	display: flex;
 	padding: 32rpx;
 	justify-content: space-between;
+    background-color: #fff;
 }
 
 .course-type {
@@ -18,7 +19,8 @@
 
 .study-course-btn-wrapper {
 	overflow:hidden;
-	margin-bottom: 20rpx;
+	padding: 20rpx 0 30rpx 0;
+    background-color: #fff;
 }
 
 .study-course-btn {
@@ -37,6 +39,11 @@
 	padding: 32rpx;
 	color: #666;
 	font-size: 28rpx;
+}
+
+
+.tab-wrapper {
+    margin-top: 20rpx;
 }
 
 
