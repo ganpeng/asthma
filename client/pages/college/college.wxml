@@ -1,7 +1,7 @@
 <view class="container">
     <view class="search-field-wrapper">
         <view class="search-field">
-          <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" focus="{{true}}" bindinput="bindKeyInput"/>
+          <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" focus="{{false}}" bindinput="bindKeyInput"/>
           <!--<image src="../../images/whiteBg.png" class="bg-image" />-->
           <image src="../../images/seach.png" class="search-btn"/>
         </view>
