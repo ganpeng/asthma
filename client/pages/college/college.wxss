@@ -1,7 +1,3 @@
-page {
-    background-color: #eee;
-}
-
 .search-field-wrapper {
     width:100%;
     height: 160rpx;
