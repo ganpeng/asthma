@@ -1,5 +1,10 @@
 const app = getApp();
-const {apiRoot, banner, qulityVideo, recommendedCourse} = require('../../utils/api');
+const {
+    apiRoot,
+    banner,
+    qulityVideo,
+    recommendedCourse
+} = require('../../utils/api');
 
 Page({
     data: {
@@ -9,6 +14,8 @@ Page({
         interval: 3000,
         duration: 1000,
         circular: true,
+        winWidth: 0,
+        winHeight: 0,
         banners: [],
         qulityVideos: [],
         recommendedCourses: []
@@ -17,40 +24,44 @@ Page({
         var that = this
         wx.pro.request({
             url: banner,
-            method: "GET",
-            header: {
-                'content-type': 'application/json'
-            }
         }).then((data) => {
-            that.setData({banners: data.banners});
+            that.setData({
+                banners: data.banners
+            });
         }).catch((err) => {
             console.log(err);
         });
         wx.pro.request({
             url: qulityVideo,
-            method: "GET",
-            header: {
-                'content-type': 'application/json'
-            }
         }).then((data) => {
-            that.setData({qulityVideos: data.videos});
+            that.setData({
+                qulityVideos: data.videos
+            });
         }).catch((err) => {
             console.log(err);
         });
         wx.pro.request({
             url: recommendedCourse,
-            method: "GET",
-            header: {
-                'content-type': 'application/json'
-            }
         }).then((data) => {
-            that.setData({recommendedCourses: data.recommendedCourses});
+            that.setData({
+                recommendedCourses: data.recommendedCourses
+            });
         }).catch((err) => {
             console.log(err);
         });
-
+        wx.pro.getSystemInfo()
+            .then((res) => {
+                that.setData({
+                    winWidth: res.windowWidth,
+                    winHeight: res.windowHeight
+                });
+            }).catch((err) => {
+                console.log(err);
+            });
     },
     gotoCollege() {
-        wx.switchTab({url: "../college/college"})
+        wx.switchTab({
+            url: "../college/college"
+        })
     }
 })

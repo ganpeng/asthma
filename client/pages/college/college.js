@@ -1,26 +1,39 @@
 var app = getApp()
-const {getAllSpecializedObj, searchCourse, recommendedCourse} = require('../../utils/api');
+const {
+    getAllSpecializedObj,
+    searchCourse,
+    recommendedCourse
+} = require('../../utils/api');
 
 Page({
     data: {
         focus: true,
+        showMoreCollegeGroup: false,
+        winWidth: 0,
+        winHeight: 0,
         specializedObjs: [],
         searchInputValue: '',
         searchList: []
     },
     onLoad: function() {
         var that = this
-        wx.pro.request({url: getAllSpecializedObj}).then((data) => {
+        wx.pro.request({
+            url: getAllSpecializedObj
+        }).then((data) => {
             const specializedObjs = data.specializedObjs.map((item) => {
-                return {name: item.name, active: false};
+                return {
+                    name: item.name,
+                    active: false
+                };
             });
 
-            that.setData({specializedObjs});
+            that.setData({
+                specializedObjs
+            });
 
         }).catch((err) => {
             console.log(err);
-        })
-
+        });
         wx.pro.request({
             url: recommendedCourse
         }).then((data) => {
@@ -30,7 +43,16 @@ Page({
             })
         }).catch((err) => {
             console.log(err);
-        })
+        });
+        wx.pro.getSystemInfo()
+            .then((res) => {
+                that.setData({
+                    winWidth: res.windowWidth,
+                    winHeight: res.windowHeight
+                });
+            }).catch((err) => {
+                console.log(err);
+            })
     },
     toggleActive(e) {
         const that = this;
@@ -45,12 +67,16 @@ Page({
                 return item;
             }
         })
-        that.setData({specializedObjs});
+        that.setData({
+            specializedObjs
+        });
     },
 
     bindKeyInput(e) {
         const that = this;
-        that.setData({searchInputValue: e.detail.value});
+        that.setData({
+            searchInputValue: e.detail.value
+        });
     },
 
     submitSearch() {
@@ -63,11 +89,23 @@ Page({
         }
         wx.pro.request({
             url: searchCourse,
-            data: {name, specializedObjs}
+            data: {
+                name,
+                specializedObjs
+            }
         }).then((data) => {
-            that.setData({searchList : data});
+            that.setData({
+                searchList: data
+            });
         }).catch((err) => {
             console.log(err);
+        })
+    },
+
+    toggleShowMore() {
+        const that = this;
+        that.setData({
+            showMoreCollegeGroup: !that.data.showMoreCollegeGroup
         })
     }
 })

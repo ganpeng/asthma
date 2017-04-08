@@ -44,9 +44,18 @@ page {
 }
 
 .college-group-list {
+    height: 90rpx;
     overflow:hidden;
 }
 
+.more-college-group-btn {
+    display: inline-block;
+    padding: 10rpx;
+    background-color: #4593f8;
+    border-radius: 6rpx;
+    color: #fff;
+    float:right;
+}
 
 
 .college-group-item {
@@ -57,4 +66,11 @@ page {
 
 .college-group-item.active {
     color: #4593f8;
+}
+
+
+
+.course-content {
+    padding: 0 30rpx;
+    box-sizing: border-box;
 }

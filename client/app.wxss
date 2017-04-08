@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
+  background-color: #f2f2f2;
 }
 
 .seperator-line {
@@ -52,16 +53,28 @@
     课程样式
  */
 
+.course-list {
+    padding: 0 30rpx;
+}
+
+.course-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 
 .course-item {
-    display: flex;
-    padding: 32rpx;
-    border-bottom: 1px solid #dcdcdc;
     background-color: #fff;
+    border-radius: 10rpx;
+    box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.5);
+    margin-bottom: 30rpx;
 }
 
 .course-info {
     flex: 1;
+    padding: 20rpx;
+    box-sizing: border-box;
 }
 
 .course-image-wrapper {
@@ -70,12 +83,14 @@
 
 .course-image-wrapper,
 .course-image {
-    width:240rpx;
-    height:144rpx;
+    width:100%;
+    height:244rpx;
 }
 
 .course-name {
     font-size: 32rpx;
+    height: 32px;
+    overflow:hidden;
     margin-bottom: 20rpx;
     font-weight: 700;
     color: #000;
