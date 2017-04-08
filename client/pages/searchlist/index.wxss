@@ -1,0 +1,11 @@
+.container {
+    padding: 30rpx;
+    box-sizing: border-box;
+}
+
+.no-searchlist {
+    color: #4593f8;
+    text-align: center;
+    font-size: 28rpx;
+    font-weight: 700;
+}

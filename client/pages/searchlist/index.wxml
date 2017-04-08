@@ -1,28 +1,6 @@
 <view class="container">
-    <view class="search-field-wrapper">
-        <view class="search-field">
-          <input placeholder="请输入关键字" placeholder-style="color: #c8c8c8" focus="{{true}}" bindinput="bindKeyInput"/>
-          <!--<image src="../../images/whiteBg.png" class="bg-image" />-->
-          <image src="../../images/seach.png" class="search-btn"/>
-        </view>
-        <view class="search-submit-btn" bindtap="submitSearch">
-            搜索
-        </view>
-    </view>
-    <view class="college-group-wrapper">
-        <view class="college-group-title">
-            学组：
-        </view>
-        <view class="college-group-list" style="height: {{ showMoreCollegeGroup ? 'auto' : '140rpx' }};">
-            <block wx:for="{{specializedObjs}}" wx:key="{{index}}">
-                <view class="college-group-item {{item.active ? 'active' : ''}}" data-index="{{index}}" bindtap="toggleActive">
-                    {{item.name}}
-                </view>
-            </block>
-        </view>
-        <view class="more-college-group-btn" bindtap="toggleShowMore">
-            {{showMoreCollegeGroup ? "收起" : "更多"}}
-        </view>
+    <view wx:if="{{searchList.length === 0}}" class="no-searchlist">
+        您搜索的课程不存在 ☺
     </view>
     <view class="course-content">
         <block wx:for="{{searchList}}" wx:key="{{index}}">

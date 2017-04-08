@@ -4,7 +4,8 @@
         "pages/my/my",
         "pages/college/college",
         "pages/coursedetail/index",
-        "pages/videoplayer/index"
+        "pages/videoplayer/index",
+        "pages/searchlist/index"
     ],
     "window": {
         "backgroundTextStyle": "light",

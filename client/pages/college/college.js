@@ -8,12 +8,11 @@ const {
 Page({
     data: {
         focus: true,
-        showMoreCollegeGroup: false,
+        showMoreCollegeGroup: true,
         winWidth: 0,
         winHeight: 0,
         specializedObjs: [],
         searchInputValue: '',
-        searchList: []
     },
     onLoad: function() {
         var that = this
@@ -31,16 +30,6 @@ Page({
                 specializedObjs
             });
 
-        }).catch((err) => {
-            console.log(err);
-        });
-        wx.pro.request({
-            url: recommendedCourse
-        }).then((data) => {
-            console.log(data);
-            that.setData({
-                searchList: data.recommendedCourses
-            })
         }).catch((err) => {
             console.log(err);
         });
@@ -87,19 +76,10 @@ Page({
         if (!name) {
             return false;
         }
-        wx.pro.request({
-            url: searchCourse,
-            data: {
-                name,
-                specializedObjs
-            }
-        }).then((data) => {
-            that.setData({
-                searchList: data
-            });
-        }).catch((err) => {
-            console.log(err);
-        })
+
+        wx.navigateTo({
+            url: `../searchlist/index?name=${name}&specializedObjs=${JSON.stringify(specializedObjs)}`
+        });
     },
 
     toggleShowMore() {
