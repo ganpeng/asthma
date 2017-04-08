@@ -6,9 +6,11 @@
         <view class="user-nickname">{{userInfo.nickName}}, 您好</view>
     </view>
     <view class="menu-list">
-        <view class="my-course menu-item">
-            我的课程
-        </view>
+        <navigator url="../mycourse/index">
+            <view class="my-course menu-item">
+                我的课程
+            </view>
+        </navigator>
         <view class="my-setting menu-item">
             我的资料
         </view>
