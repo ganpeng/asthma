@@ -11,8 +11,11 @@
                 我的课程
             </view>
         </navigator>
-        <view class="my-setting menu-item">
-            我的资料
-        </view>
+        <navigator url="../myinfo/index">
+            <view class="my-setting menu-item" bindtap="gotoInfoPage">
+                我的资料
+            </view>
+        </navigator>
     </view>
 </view>
+

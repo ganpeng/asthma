@@ -1,0 +1,60 @@
+<view class="container">
+    <view class="menu-list">
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                用户名
+            </view>
+            <view class="menu-item-title" data-label="用户名" data-key="username" data-value="{{user.username}}" bindtap="changeinfo">
+                {{user.username}}
+            </view>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                姓名
+            </view>
+            <view class="menu-item-title" data-label="姓名" data-key="name" data-value="{{user.name}}" bindtap="changeinfo">
+                {{user.name}}
+            </view>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                性别
+            </view>
+            <view class="menu-item-title">
+                {{user.sex}}
+            </view>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                邮箱
+            </view>
+            <view class="menu-item-title" data-label="邮箱" data-key="email" data-value="{{user.email}}" bindtap="changeinfo">
+                {{user.email}}
+            </view>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                手机
+            </view>
+            <view class="menu-item-title" data-label="手机" data-key="phone" data-value="{{user.phone}}" bindtap="changeinfo">
+                {{user.phone}}
+            </view>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                省市
+            </view>
+            <view class="menu-item-title">
+                北京市
+            </view>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                详细地址
+            </view>
+            <view class="menu-item-title" data-label="详细地址" data-key="address" data-value="{{user.address}}" bindtap="changeinfo">
+                {{user.address}}
+            </view>
+        </view>
+    </view>
+</view>

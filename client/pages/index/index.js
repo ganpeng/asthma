@@ -61,7 +61,7 @@ Page({
     },
     gotoCollege() {
         wx.switchTab({
-            url: "../college/college"
+            url: "../college/index"
         })
     }
 })

@@ -1,0 +1,27 @@
+
+.menu-item {
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #fff url('../../images/rightArrow.png') no-repeat 94% center;
+    background-size: 45rpx 45rpx;
+    text-indent: 6%;
+    color: #4593f8;
+    font-weight: 700;
+    font-size: 28rpx;
+    margin-bottom: 20rpx;
+    overflow:hidden;
+}
+
+
+.menu-item .menu-item-label {
+    float:left;
+    color: #999;
+}
+
+.menu-item .menu-item-title {
+    overflow:hidden;
+    text-align: right;
+    padding-right: 15%;
+    box-sizing: border-box;
+}
+
