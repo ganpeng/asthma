@@ -30,15 +30,16 @@ Page({
     saveInfoHandle() {
         const that = this;
         const { key, value } = that.data;
+        const pages = getCurrentPages();
+        const prePage = pages[pages.length - 2];
         wx.pro.getStorage('user')
             .then((user) => {
                 const newUser = Object.assign({}, user, { [key]: value });
                 return wx.pro.setStorage('user', newUser);
             })
             .then((otherUser) => {
-                wx.reLaunch({
-                    url: 'pages/myinfo/index'
-                });
+                prePage.setData({user: otherUser});
+                wx.navigateBack();
             })
             .catch((err) => {
                 console.log(err);

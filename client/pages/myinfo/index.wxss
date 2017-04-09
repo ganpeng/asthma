@@ -1,15 +1,16 @@
 
 .menu-item {
+    position:relative;
     height: 80rpx;
     line-height: 80rpx;
-    background: #fff url('../../images/rightArrow.png') no-repeat 94% center;
-    background-size: 45rpx 45rpx;
-    text-indent: 6%;
+    background: #fff;
     color: #4593f8;
     font-weight: 700;
     font-size: 28rpx;
     margin-bottom: 20rpx;
     overflow:hidden;
+    box-sizing: border-box;
+    padding-left: 50rpx;
 }
 
 
@@ -21,7 +22,19 @@
 .menu-item .menu-item-title {
     overflow:hidden;
     text-align: right;
-    padding-right: 15%;
+    padding-right: 100rpx;
     box-sizing: border-box;
 }
+
+.next-icon {
+    position:absolute;
+    top:50%;
+    right:50rpx;
+    transform: translateY(-50%);
+    width:45rpx;
+    height:45rpx;
+}
+
+
+
 
