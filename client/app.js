@@ -4,7 +4,7 @@ require('./utils/service');
 const user = {
     username: 'louisGan',
     name: '小甘',
-    sex: '男',
+    sex: '女',
     email: '464860687@qq.com',
     phone: '15210069510',
     address: '朝阳门'

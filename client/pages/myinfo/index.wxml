@@ -26,7 +26,7 @@
             <view class="menu-item-label">
                 性别
             </view>
-            <view class="menu-item-title">
+            <view class="menu-item-title" bindtap="showGenderDialog">
                 {{user.sex}}
             </view>
             <image class="next-icon" src="../../images/rightArrow.png" />
@@ -72,6 +72,27 @@
                 </view>
                 <image class="next-icon" src="../../images/rightArrow.png" />
             </navigator>
+        </view>
+    </view>
+    <view wx:if="{{genderDialogStatus}}">
+        <view class="gender-dialog">
+            <view class="gender-content">
+            <!--
+                <view class="male">
+                    <view class="male-icon"></view>
+                    <view class="male-title">男</view>
+                </view>
+                <view class="female">
+                    <view class="female-icon"></view>
+                    <view class="female-title">女</view>
+                </view>
+            -->
+                <radio-group class="radio-group" bindchange="radioChange">
+                    <label class="radio" wx:for="{{genders}}">
+                        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                        </label>
+                </radio-group>
+            </view>
         </view>
     </view>
 </view>
