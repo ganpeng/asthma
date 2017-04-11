@@ -15,7 +15,7 @@
             </view>
         </navigator>
         <navigator url="../myinfo/index">
-            <view class="my-setting menu-item" bindtap="gotoInfoPage">
+            <view class="my-setting menu-item">
                 <view class="menu-item-title">
                     我的资料
                 </view>
@@ -24,4 +24,3 @@
         </navigator>
     </view>
 </view>
-

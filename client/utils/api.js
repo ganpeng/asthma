@@ -8,6 +8,7 @@ function courseDetailApi(id) {
 }
 
 module.exports = {
+    appId: "wx5cbeb3b042c9c4ba",
     apiRoot,
     banner: `${apiRoot}/banner`,
     qulityVideo: `${apiRoot}/video/qulityvideo`,
