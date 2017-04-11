@@ -2,6 +2,7 @@ const app = getApp()
 
 Page({
     data: {
+        imageRoot: app.globalData.imageRoot,
         winWidth: 0,
         winHeight: 0,
         mycourseList: []

@@ -6,6 +6,7 @@ const {
 
 Page({
     data: {
+        imageRoot: app.globalData.imageRoot,
         winWidth: 0,
         winHeight: 0,
         searchList: []

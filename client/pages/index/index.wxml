@@ -35,7 +35,7 @@
             <navigator url="../coursedetail/index?id={{item._id}}">
                 <view class="course-item" style="width: {{(winWidth * 2 - 90) / 2}}rpx;">
                     <view class="course-image-wrapper">
-                        <image class="course-image" src="../../images/kecheng.jpg" />
+                        <image class="course-image" src="{{imageRoot}}{{item.img}}" />
                     </view>
                     <view class="course-info">
                         <view class="course-name">{{item.name}}</view>
@@ -68,10 +68,10 @@
     </view>
     <view class="course-content">
         <block wx:for="{{qulityVideos}}" wx:key="{{index}}">
-            <navigator url="../videoplayer/index?videoUrl={{item.videoUrl}}">
+            <navigator url="../videoplayer/index?videoUrl={{item.mp4}}">
                 <view class="course-item" style="width: {{(winWidth * 2 - 90) / 2}}rpx;">
                     <view class="course-image-wrapper">
-                        <image class="course-image" src="../../images/kecheng.jpg" />
+                        <image class="course-image" src="{{imageRoot}}{{item.img}}" />
                     </view>
                     <view class="course-info">
                         <view class="course-name">{{item.name}}</view>

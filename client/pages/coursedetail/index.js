@@ -79,7 +79,8 @@ Page({
         const index = e.target.dataset.index;
         const {courseware} = that.data.course;
         if (courseware[index] && courseware[index].videoUrl) {
-            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`});
+            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].mp4}`});
+            // wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`});
         }
     }
 })
