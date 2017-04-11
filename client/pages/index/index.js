@@ -8,6 +8,7 @@ const {
 
 Page({
     data: {
+        imageRoot: 'https://101.200.228.228:9999',
         apiRoot,
         indicatorDots: false,
         autoplay: true,

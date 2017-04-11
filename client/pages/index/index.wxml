@@ -4,7 +4,7 @@
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}"  circular="{{circular}}">
       <block wx:for="{{banners}}" wx:key="{{index}}">
         <swiper-item>
-          <image src="{{apiRoot}}/images/{{item.url}}" class="slide-image"/>
+          <image src="{{imageRoot}}{{item.img}}" class="slide-image"/>
         </swiper-item>
       </block>
     </swiper>
