@@ -1,23 +1,17 @@
 // const cityData = require('../../libs/cityData');
 const app = getApp();
-const { getProvince, getDepartment } = require('../../utils/util');
+const {getProvince, getDepartment} = require('../../utils/util');
 
 let stupidData = getProvince();
 let stupidData2 = getDepartment();
 
 const myNewData = stupidData.map((item, index) => {
     const citys = stupidData[item].map((city) => {
-        return {
-            name: city
-        };
+        return {name: city};
     });
 
-    return {
-        name: item,
-        city: citys
-    }
+    return {name: item, city: citys}
 });
-
 
 let cacheProvince = 0;
 let cacheCity = 0;
@@ -29,6 +23,22 @@ const provinces = myNewData.map((item) => {
 const citys = myNewData.filter((item) => item.name === '北京市')[0].city.map((city) => city.name);
 // const areas = cityData.filter((item) => item.name === '北京')[0].city.filter((city) => city.name === '北京')[0].area;
 
+const myDepartmentData = stupidData2.map((item, index) => {
+    const citys = stupidData2[item].map((city) => {
+        return {name: city};
+    });
+
+    return {name: item, city: citys};
+})
+
+let cachedepartment1 = 0;
+let cachedepartment2 = 0;
+
+// 初始化科室类型选择器
+const departmentFirsts = myDepartmentData.map((item) => {
+    return item.name;
+});
+const departmentSeconds = myDepartmentData.filter((item) => item.name === '内科')[0].city.map((city) => city.name);
 
 Page({
     data: {
@@ -36,6 +46,7 @@ Page({
         genderDialogStatus: false,
         cityPickerDialogStatus: false,
         certificateCategoryDialogStatus: false,
+        departmentPickerDialogStatus: false,
         // 证件类型
         certificateCategories: [
             {
@@ -74,6 +85,15 @@ Page({
         province: '',
         city: '',
         // area: ''
+
+        //  科室选择器
+        departmentValue: [
+            0, 0
+        ],
+        departmentFirsts,
+        departmentSeconds,
+        department_first: '',
+        department_second: ''
     },
     onLoad(option) {
         const that = this;
@@ -150,20 +170,28 @@ Page({
         const that = this;
         that.setData({cityPickerDialogStatus: false});
     },
+    showDepartmentPickerDialog() {
+        const that = this;
+        that.setData({departmentPickerDialogStatus: true});
+    },
+    hideDepartmentPickerDialog() {
+        const that = this;
+        that.setData({departmentPickerDialogStatus: false});
+    },
     saveCity() {
         const that = this;
-        const user = Object.assign({}, that.data.user, {province: that.data.province, city: that.data.city});
+        const user = Object.assign({}, that.data.user, {
+            province: that.data.province,
+            city: that.data.city
+        });
         wx.pro.setStorage('user', user).then((_user) => {
             that.setData({user: _user});
             that.hideCityPickerDialog();
         }).catch((err) => {
             console.log(err);
         })
-        console.log(that.data.province);
-        console.log(that.data.city);
-        // console.log(that.data.area);
     },
-    bindChange: function(e) {
+    bindCityChange: function(e) {
         const val = e.detail.value
 
         if (cacheProvince != val[0]) {
@@ -182,7 +210,7 @@ Page({
                 // area: this.data.areas[0]
             });
             cacheProvince = val[0];
-        }  else if (cacheCity != val[1]) {
+        } else if (cacheCity != val[1]) {
             const province = provinces[val[0]];
             const citys = myNewData.filter((item) => item.name === province)[0].city.map((city) => city.name);
             this.setData({citys});
@@ -214,5 +242,46 @@ Page({
                 area: this.data.areas[val[2]]
             });
         }
+    },
+    bindDepartmentChange: function(e) {
+        const val = e.detail.value
+        if (cachedepartment1 != val[0]) {
+            const department_first = departmentFirsts[val[0]];
+            const departmentSeconds = myDepartmentData.filter((item) => item.name === department_first)[0].city.map((city) => city.name);
+            this.setData({departmentSeconds});
+            this.setData({
+                departmentValue: [
+                    val[0], 0
+                ],
+                department_first: this.data.provinces[val[0]],
+                department_second: this.data.departmentSeconds[0]
+            });
+            cachedepartment1 = val[0];
+        } else if (cachedepartment2 != val[1]) {
+            const department_first = departmentFirsts[val[0]];
+            const departmentSeconds = myDepartmentData.filter((item) => item.name === department_first)[0].city.map((city) => city.name);
+            this.setData({departmentSeconds});
+            this.setData({
+                departmentValue: [
+                    val[0], val[1]
+                ],
+                department_first: this.data.departmentFirsts[val[0]],
+                department_second: this.data.departmentSeconds[val[1]]
+            });
+            cachedepartment2 = val[1];
+        } else {}
+    },
+    saveDepartment() {
+        const that = this;
+        const user = Object.assign({}, that.data.user, {
+            department_first: that.data.department_first,
+            department_second: that.data.department_second
+        });
+        wx.pro.setStorage('user', user).then((_user) => {
+            that.setData({user: _user});
+            that.hideDepartmentPickerDialog();
+        }).catch((err) => {
+            console.log(err);
+        });
     }
 })
