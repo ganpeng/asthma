@@ -173,9 +173,11 @@
                 <picker-view-column class="picker-view-column">
                   <view wx:key="{{index}}" wx:for="{{citys}}" style="line-height: 50px">{{item}}</view>
                 </picker-view-column>
+                <!--
                 <picker-view-column class="picker-view-column">
                   <view wx:key="{{index}}" wx:for="{{areas}}" style="line-height: 50px">{{item}}</view>
                 </picker-view-column>
+                -->
             </picker-view>
         </view>
     </view>

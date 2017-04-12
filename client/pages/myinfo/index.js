@@ -1,17 +1,33 @@
-const cityData = require('../../libs/cityData');
+// const cityData = require('../../libs/cityData');
 const app = getApp();
+const { getProvince, getDepartment } = require('../../utils/util');
 
+let stupidData = getProvince();
+let stupidData2 = getDepartment();
+
+const myNewData = stupidData.map((item, index) => {
+    const citys = stupidData[item].map((city) => {
+        return {
+            name: city
+        };
+    });
+
+    return {
+        name: item,
+        city: citys
+    }
+});
 
 
 let cacheProvince = 0;
 let cacheCity = 0;
 
 // 初始化地址选择器
-const provinces = cityData.map((item) => {
+const provinces = myNewData.map((item) => {
     return item.name;
 });
-const citys = cityData.filter((item) => item.name === '北京')[0].city.map((city) => city.name);
-const areas = cityData.filter((item) => item.name === '北京')[0].city.filter((city) => city.name === '北京')[0].area;
+const citys = myNewData.filter((item) => item.name === '北京市')[0].city.map((city) => city.name);
+// const areas = cityData.filter((item) => item.name === '北京')[0].city.filter((city) => city.name === '北京')[0].area;
 
 
 Page({
@@ -54,10 +70,10 @@ Page({
         ],
         provinces,
         citys,
-        areas,
+        // areas,
         province: '',
         city: '',
-        area: ''
+        // area: ''
     },
     onLoad(option) {
         const that = this;
@@ -136,48 +152,55 @@ Page({
     },
     saveCity() {
         const that = this;
+        const user = Object.assign({}, that.data.user, {province: that.data.province, city: that.data.city});
+        wx.pro.setStorage('user', user).then((_user) => {
+            that.setData({user: _user});
+            that.hideCityPickerDialog();
+        }).catch((err) => {
+            console.log(err);
+        })
         console.log(that.data.province);
         console.log(that.data.city);
-        console.log(that.data.area);
+        // console.log(that.data.area);
     },
     bindChange: function(e) {
         const val = e.detail.value
 
         if (cacheProvince != val[0]) {
             const province = provinces[val[0]];
-            const citys = cityData.filter((item) => item.name === province)[0].city.map((city) => city.name);
+            const citys = myNewData.filter((item) => item.name === province)[0].city.map((city) => city.name);
             this.setData({citys});
-            const city = citys[0];
-            const areas = cityData.filter((item) => item.name === province)[0].city.filter((_city) => _city.name === city)[0].area;
-            this.setData({areas});
+            // const city = citys[0];
+            // const areas = cityData.filter((item) => item.name === province)[0].city.filter((_city) => _city.name === city)[0].area;
+            // this.setData({areas});
             this.setData({
                 value: [
                     val[0], 0, 0
                 ],
                 province: this.data.provinces[val[0]],
                 city: this.data.citys[0],
-                area: this.data.areas[0]
+                // area: this.data.areas[0]
             });
             cacheProvince = val[0];
         }  else if (cacheCity != val[1]) {
             const province = provinces[val[0]];
-            const citys = cityData.filter((item) => item.name === province)[0].city.map((city) => city.name);
+            const citys = myNewData.filter((item) => item.name === province)[0].city.map((city) => city.name);
             this.setData({citys});
-            const city = citys[val[1]];
-            const areas = cityData.filter((item) => item.name === province)[0].city.filter((_city) => _city.name === city)[0].area;
-            this.setData({areas});
+            // const city = citys[val[1]];
+            // const areas = cityData.filter((item) => item.name === province)[0].city.filter((_city) => _city.name === city)[0].area;
+            // this.setData({areas});
             this.setData({
                 value: [
                     val[0], val[1], 0
                 ],
                 province: this.data.provinces[val[0]],
                 city: this.data.citys[val[1]],
-                area: this.data.areas[0]
+                // area: this.data.areas[0]
             });
             cacheCity = val[1];
         } else {
             const province = provinces[val[0]];
-            const citys = cityData.filter((item) => item.name === province)[0].city.map((city) => city.name);
+            const citys = myNewData.filter((item) => item.name === province)[0].city.map((city) => city.name);
             this.setData({citys});
             const city = citys[val[1]];
             const areas = cityData.filter((item) => item.name === province)[0].city.filter((_city) => _city.name === city)[0].area;
