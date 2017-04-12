@@ -1,10 +1,12 @@
 const cityData = require('../../libs/cityData');
 const app = getApp();
 
+
+
 let cacheProvince = 0;
 let cacheCity = 0;
 
-
+// 初始化地址选择器
 const provinces = cityData.map((item) => {
     return item.name;
 });
@@ -17,6 +19,24 @@ Page({
         user: {},
         genderDialogStatus: false,
         cityPickerDialogStatus: false,
+        certificateCategoryDialogStatus: false,
+        // 证件类型
+        certificateCategories: [
+            {
+                name: '身份证',
+                value: '身份证',
+                checked: false
+            }, {
+                name: '护照',
+                value: '护照',
+                checked: false
+            }, {
+                name: '军官证',
+                value: '军官证',
+                checked: false
+            }
+        ],
+        // 性别属性
         genders: [
             {
                 name: '男',
@@ -28,6 +48,7 @@ Page({
                 checked: false
             }
         ],
+        //  地址选择器属性
         value: [
             0, 0, 0
         ],
@@ -44,7 +65,9 @@ Page({
         wx.pro.getStorage('user').then((user) => {
             that.setData({user});
             const gender = user.sex;
+            const certificate_category = user.certificate_category;
             that.changeGenders(gender);
+            that.changeCertificateCategories(certificate_category);
         }).catch((err) => {
             console.log(err);
         })
@@ -60,7 +83,18 @@ Page({
         });
         that.setData({genders});
     },
-    radioChange(e) {
+    changeCertificateCategories(certificate_category) {
+        const that = this;
+        const certificateCategories = that.data.certificateCategories.map((item) => {
+            if (item.value === certificate_category) {
+                return {name: item.name, value: item.value, checked: true}
+            } else {
+                return {name: item.name, value: item.value, checked: false}
+            }
+        });
+        that.setData({certificateCategories});
+    },
+    genderRadioChange(e) {
         const that = this;
         const sex = e.detail.value;
         const user = Object.assign({}, that.data.user, {sex});
@@ -71,6 +105,22 @@ Page({
         }).catch((err) => {
             console.log(err);
         })
+    },
+    certificateCategoryRadioChange(e) {
+        const that = this;
+        const certificate_category = e.detail.value;
+        const user = Object.assign({}, that.data.user, {certificate_category});
+        wx.pro.setStorage('user', user).then((user) => {
+            const certificate_category = user.certificate_category;
+            that.setData({user, certificateCategoryDialogStatus: false});
+            that.changeCertificateCategories(certificate_category);
+        }).catch((err) => {
+            console.log(err);
+        })
+    },
+    showCertificateCategoryDialog() {
+        const that = this;
+        that.setData({certificateCategoryDialogStatus: true});
     },
     showGenderDialog() {
         const that = this;

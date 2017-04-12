@@ -13,9 +13,9 @@
         </view>
         <view class="my-setting menu-item">
             <view class="menu-item-label">
-                姓名
+                昵称
             </view>
-            <navigator url="../editeInfo/index?key=name&value={{user.name}}&label=姓名">
+            <navigator url="../editeInfo/index?key=name&value={{user.name}}&label=昵称">
                 <view class="menu-item-title">
                     {{user.name}}
                 </view>
@@ -58,13 +58,13 @@
                 省市
             </view>
             <view class="menu-item-title" bindtap="showCityPickerDialog">
-                北京市
+                {{user.province}} {{user.city}}
             </view>
             <image class="next-icon" src="../../images/rightArrow.png"  bindtap="showCityPickerDialog"/>
         </view>
         <view class="my-setting menu-item">
             <view class="menu-item-label">
-                详细地址
+                通讯地址
             </view>
             <navigator url="../editeInfo/index?key=address&value={{user.address}}&label=详细地址">
                 <view class="menu-item-title">
@@ -73,22 +73,87 @@
                 <image class="next-icon" src="../../images/rightArrow.png" />
             </navigator>
         </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                邮编
+            </view>
+            <navigator url="../editeInfo/index?key=code&value={{user.code}}&label=邮编">
+                <view class="menu-item-title">
+                    {{user.code}}
+                </view>
+                <image class="next-icon" src="../../images/rightArrow.png" />
+            </navigator>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                证件类型
+            </view>
+            <view class="menu-item-title" bindtap="showCertificateCategoryDialog">
+                {{user.certificate_category}}
+            </view>
+            <image class="next-icon" src="../../images/rightArrow.png" />
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                证件号码
+            </view>
+            <navigator url="../editeInfo/index?key=certificate_code&value={{user.certificate_code}}&label=证件号码">
+                <view class="menu-item-title">
+                    {{user.certificate_code}}
+                </view>
+                <image class="next-icon" src="../../images/rightArrow.png" />
+            </navigator>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                科室
+            </view>
+            <navigator url="../editeInfo/index?key=address&value={{user.address}}&label=详细地址">
+                <view class="menu-item-title">
+                    {{user.address}}
+                </view>
+                <image class="next-icon" src="../../images/rightArrow.png" />
+            </navigator>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                职称
+            </view>
+            <navigator url="../editeInfo/index?key=title&value={{user.title}}&label=职称">
+                <view class="menu-item-title">
+                    {{user.title}}
+                </view>
+                <image class="next-icon" src="../../images/rightArrow.png" />
+            </navigator>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                工作单位
+            </view>
+            <navigator url="../editeInfo/index?key=unit&value={{user.unit}}&label=工作单位">
+                <view class="menu-item-title">
+                    {{user.unit}}
+                </view>
+                <image class="next-icon" src="../../images/rightArrow.png" />
+            </navigator>
+        </view>
+        <view class="my-setting menu-item">
+            <view class="menu-item-label">
+                医生资格证编号
+            </view>
+            <navigator url="../editeInfo/index?key=doctor_certificate_code&value={{user.doctor_certificate_code}}&label=医生资格证编号">
+                <view class="menu-item-title">
+                    {{user.doctor_certificate_code}}
+                </view>
+                <image class="next-icon" src="../../images/rightArrow.png" />
+            </navigator>
+        </view>
     </view>
     <view wx:if="{{genderDialogStatus}}">
         <view class="gender-dialog">
             <view class="gender-content">
-            <!--
-                <view class="male">
-                    <view class="male-icon"></view>
-                    <view class="male-title">男</view>
-                </view>
-                <view class="female">
-                    <view class="female-icon"></view>
-                    <view class="female-title">女</view>
-                </view>
-            -->
-                <radio-group class="radio-group" bindchange="radioChange">
-                    <label class="radio" wx:for="{{genders}}">
+                <radio-group class="radio-group" bindchange="genderRadioChange">
+                    <label wx:key="{{index}}" class="radio" wx:for="{{genders}}">
                         <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
                         </label>
                 </radio-group>
@@ -112,6 +177,17 @@
                   <view wx:key="{{index}}" wx:for="{{areas}}" style="line-height: 50px">{{item}}</view>
                 </picker-view-column>
             </picker-view>
+        </view>
+    </view>
+    <view wx:if="{{certificateCategoryDialogStatus}}">
+        <view class="gender-dialog">
+            <view class="gender-content">
+                <radio-group class="radio-group" bindchange="certificateCategoryRadioChange">
+                    <label wx:key="{{index}}" class="radio" wx:for="{{certificateCategories}}">
+                        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+                        </label>
+                </radio-group>
+            </view>
         </view>
     </view>
 </view>
