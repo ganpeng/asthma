@@ -80,7 +80,7 @@ function promisify() {
                         reject(res)
                     } else {
                         console.log('wx.request success', options, res.data)
-                        resolve(res.data) // unwrap data
+                        resolve(res.data) 
                     }
                 },
                 fail: err => {

@@ -5,7 +5,7 @@
     <view class="course-content">
         <block wx:for="{{searchList}}" wx:key="{{index}}">
             <navigator url="../coursedetail/index?id={{item._id}}">
-                <view class="course-item" style="width: {{(winWidth * pixelRatio - 90) / (2 * pixelRatio)}}px;">
+                <view class="course-item" style="width: {{(winWidth - (10 * 3)) / 2}}px;">
                     <view class="course-image-wrapper">
                         <image class="course-image" src="{{imageRoot}}{{item.img}}" />
                     </view>

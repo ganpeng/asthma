@@ -17,8 +17,6 @@ page {
 }
 
 
-
-
 /*
     课程样式
  */
@@ -38,7 +36,7 @@ page {
     background-color: #fff;
     border-radius: 10rpx;
     box-shadow: 0 0 10rpx rgba(0, 0, 0, 0.5);
-    margin-bottom: 30rpx;
+    margin-bottom: 10px;
 }
 
 .course-info {
