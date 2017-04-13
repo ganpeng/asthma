@@ -4,13 +4,17 @@ Page({
     data: {
         winWidth: 0,
         winHeight: 0,
-        src: ''
+        src: '',
+        content: '',
+        unit: '',
+        teacher: '',
+        currentTab: 0
     },
     onLoad: function(options) {
 
-		const { videoUrl } = options;
-		this.setData({src: videoUrl});
-        console.log(videoUrl);
+        const {videoUrl, content, unit, teacher} = options;
+        console.log(content, unit, teacher);
+        this.setData({src: videoUrl, content, unit, teacher});
 
         wx.pro.getSystemInfo().then((res) => {
             this.setData({winWidth: res.windowWidth, winHeight: res.windowHeight});
@@ -18,5 +22,17 @@ Page({
             console.log(err);
         })
 
+    },
+    bindChange(e) {
+        const that = this;
+        that.setData({currentTab: e.detail.current});
+    },
+    switchNav(e) {
+        const that = this;
+        if (this.data.currentTab === e.target.dataset.current) {
+            return false;
+        } else {
+            that.setData({currentTab: e.target.dataset.current})
+        }
     }
 })

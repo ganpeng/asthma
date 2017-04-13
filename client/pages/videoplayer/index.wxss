@@ -1,6 +1,19 @@
+/*
 .container {
 	display: flex;
 	background-color: #000;
 	justify-content: center;
 	align-items: center;
+}
+*/
+
+.container {
+
+}
+
+.courseware-summary,
+.courseware-expert {
+	padding: 32rpx;
+	color: #666;
+	font-size: 28rpx;
 }

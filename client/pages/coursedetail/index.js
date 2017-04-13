@@ -71,7 +71,7 @@ Page({
         const that = this;
         const course = that.data.course.courseware[0];
         if (course && course.videoUrl) {
-            wx.navigateTo({url: `../videoplayer/index?videoUrl=${course.videoUrl}`});
+            wx.navigateTo({url: `../videoplayer/index?videoUrl=${course.videoUrl}&content=${course.content}&unit=${course.unit}&teacher=${course.teacher}`});
         }
     },
     playVideo(e) {
@@ -79,7 +79,7 @@ Page({
         const index = e.target.dataset.index;
         const {courseware} = that.data.course;
         if (courseware[index] && courseware[index].videoUrl) {
-            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].mp4}`});
+            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&content=${courseware.content}&unit=${courseware.unit}&teacher=${courseware.teacher}`});
             // wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`});
         }
     }
