@@ -7,10 +7,10 @@ const imageRoot = 'https://deac.medclass.cn';
 
 const user = {
     username: 'louisGan',
-    name: '小甘',
+    name: '小王',
     sex: '女',
-    email: '464860687@qq.com',
-    phone: '15210069510',
+    email: '123456789@qq.com',
+    phone: '13893221214',
     address: '朝阳门',
     certificate_category: '证件类型一',
     certificate_code: '023203842374923472389',

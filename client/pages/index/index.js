@@ -18,6 +18,7 @@ Page({
         circular: true,
         winWidth: 0,
         winHeight: 0,
+        pixelRatio:2,
         banners: [],
         qulityVideos: [],
         recommendedCourses: []
@@ -53,9 +54,11 @@ Page({
         });
         wx.pro.getSystemInfo()
             .then((res) => {
+                console.log(res);
                 that.setData({
                     winWidth: res.windowWidth,
-                    winHeight: res.windowHeight
+                    winHeight: res.windowHeight,
+                    pixelRatio: res.pixelRatio
                 });
             }).catch((err) => {
                 console.log(err);

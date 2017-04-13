@@ -33,7 +33,7 @@
     <view class="course-content">
         <block wx:for="{{recommendedCourses}}" wx:key="{{index}}">
             <navigator url="../coursedetail/index?id={{item._id}}">
-                <view class="course-item" style="width: {{(winWidth * 2 - 90) / 2}}rpx;">
+                <view class="course-item" style="width: {{(winWidth * pixelRatio - 90) / (2 * pixelRatio)}}px;">
                     <view class="course-image-wrapper">
                         <image class="course-image" src="{{imageRoot}}{{item.img}}" />
                     </view>
@@ -69,7 +69,7 @@
     <view class="course-content">
         <block wx:for="{{qulityVideos}}" wx:key="{{index}}">
             <navigator url="../videoplayer/index?videoUrl={{item.mp4}}&content={{item.content}}&unit={{item.unit}}&teacher={{item.teacher}}">
-                <view class="course-item" style="width: {{(winWidth * 2 - 90) / 2}}rpx;">
+                <view class="course-item" style="width: {{(winWidth * pixelRatio - 90) / (2 * pixelRatio)}}px;">
                     <view class="course-image-wrapper">
                         <image class="course-image" src="{{imageRoot}}{{item.img}}" />
                     </view>

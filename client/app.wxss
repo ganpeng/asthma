@@ -24,7 +24,7 @@ page {
  */
 
 .course-list {
-    padding: 0 30rpx;
+    padding: 0 10px;
 }
 
 .course-content {

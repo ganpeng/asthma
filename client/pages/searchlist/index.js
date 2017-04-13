@@ -9,6 +9,7 @@ Page({
         imageRoot: app.globalData.imageRoot,
         winWidth: 0,
         winHeight: 0,
+        pixelRatio: 2,
         searchList: []
     },
     onLoad: function(option) {
@@ -33,7 +34,8 @@ Page({
         wx.pro.getSystemInfo().then((res) => {
             this.setData({
                 winWidth: res.windowWidth,
-                winHeight: res.windowHeight
+                winHeight: res.windowHeight,
+                pixelRatio: res.pixelRatio
             });
         }).catch((err) => {
             console.log(err);
