@@ -75,15 +75,21 @@ function promisify() {
                 method: options.method || 'GET',
                 data: options.data,
                 success: res => {
+                    if (options.toast) {
+                        wx.hideToast();
+                    }
                     if (res.statusCode >= 400) {
                         console.error('wx.request fail [business]', options, res.statusCode, res.data)
                         reject(res)
                     } else {
                         console.log('wx.request success', options, res.data)
-                        resolve(res.data) 
+                        resolve(res.data)
                     }
                 },
                 fail: err => {
+                    if (options.toast) {
+                        wx.hideToast();
+                    }
                     console.error('wx.request fail [network]', options, err)
                     reject(err)
                 }

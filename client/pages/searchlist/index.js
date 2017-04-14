@@ -10,27 +10,60 @@ Page({
         winWidth: 0,
         winHeight: 0,
         pixelRatio: 2,
-        searchList: []
+        searchList: [],
+        noResults: false
     },
     onLoad: function(option) {
         const that = this;
 
-        const name = option.name;
-        const specializedObjs = JSON.parse(option.specializedObjs);
+        const { name, typeid } = option;
+        if (name) {
+            wx.pro.request({
+                url: searchCourse,
+                data: {
+                    name
+                },
+                toast: true
+            }).then((data) => {
+                if (data.length <= 0) {
+                    that.setData({
+                        noResults: true
+                    });
 
-        wx.pro.request({
-            url: searchCourse,
-            data: {
-                name,
-                specializedObjs
-            }
-        }).then((data) => {
-            that.setData({
-                searchList: data
+                } else {
+                    that.setData({
+                        searchList: data,
+                        noResults: false
+                    });
+                }
+            }).catch((err) => {
+                console.log(err);
             });
-        }).catch((err) => {
-            console.log(err);
-        });
+        }
+
+        if (typeid) {
+            wx.pro.request({
+                url: searchCourse,
+                data: {
+                    typeid
+                },
+                toast: true
+            }).then((data) => {
+                if (data.length <= 0) {
+                    that.setData({
+                        noResults: true
+                    });
+
+                } else {
+                    that.setData({
+                        searchList: data,
+                        noResults: false
+                    });
+                }
+            }).catch((err) => {
+                console.log(err);
+            });
+        };
         wx.pro.getSystemInfo().then((res) => {
             this.setData({
                 winWidth: res.windowWidth,

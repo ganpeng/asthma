@@ -27,15 +27,15 @@ const user = {
 
 App({
     onLaunch() {
-        Promise.all([wx.pro.login(), wx.pro.getUserInfo()]).then((results) => {
-            const {code} = results[0];
-            const {encryptedData, iv} = results[1];
-            return wx.pro.request({url: `${apiRoot}/weixin?code=${code}&encryptedData=${encodeURIComponent(encryptedData)}&iv=${encodeURIComponent(iv)}`})
-        }).then((data) => {
-            console.log(data);
-        }).catch((err) => {
-            console.log(err);
-        });
+        // Promise.all([wx.pro.login(), wx.pro.getUserInfo()]).then((results) => {
+        //     const {code} = results[0];
+        //     const {encryptedData, iv} = results[1];
+        //     return wx.pro.request({url: `${apiRoot}/weixin?code=${code}&encryptedData=${encodeURIComponent(encryptedData)}&iv=${encodeURIComponent(iv)}`})
+        // }).then((data) => {
+        //     console.log(data);
+        // }).catch((err) => {
+        //     console.log(err);
+        // });
         wx.pro.setStorage('user', user).then((user) => {
             console.log('success:');
         }).catch((err) => {

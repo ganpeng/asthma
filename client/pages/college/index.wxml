@@ -15,7 +15,7 @@
         </view>
         <view class="college-group-list" style="height: {{ showMoreCollegeGroup ? 'auto' : '140rpx' }};">
             <block wx:for="{{specializedObjs}}" wx:key="{{index}}">
-                <view class="college-group-item {{item.active ? 'active' : ''}}" data-index="{{index}}" bindtap="toggleActive">
+                <view class="college-group-item {{item.active ? 'active' : ''}}" data-typeid="{{item.id}}" bindtap="toggleActive">
                     {{item.name}}
                 </view>
             </block>
@@ -24,6 +24,7 @@
             {{showMoreCollegeGroup ? "收起" : "更多"}}
         </view>
     </view>
+    <!--
     <view class="course-content">
         <block wx:for="{{searchList}}" wx:key="{{index}}">
             <navigator url="../coursedetail/index?id={{item._id}}">
@@ -47,4 +48,5 @@
             </navigator>
         </block>
     </view>
+    -->
 </view>

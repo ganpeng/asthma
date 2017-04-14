@@ -1,5 +1,5 @@
 <view class="container">
-    <view wx:if="{{searchList.length === 0}}" class="no-searchlist">
+    <view wx:if="{{noResults}}" class="no-searchlist">
         您搜索的课程不存在 ☺
     </view>
     <view class="course-content">
