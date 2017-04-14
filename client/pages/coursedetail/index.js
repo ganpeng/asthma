@@ -78,8 +78,8 @@ Page({
         const that = this;
         const index = e.target.dataset.index;
         const {courseware} = that.data.course;
-        if (courseware[index] && courseware[index].videoUrl) {
-            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&content=${courseware.content}&unit=${courseware.unit}&teacher=${courseware.teacher}`});
+        if (courseware && courseware[index].videoUrl) {
+            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&content=${courseware[index].content}&unit=${courseware[index].unit}&teacher=${courseware[index].teacher}`});
             // wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`});
         }
     }

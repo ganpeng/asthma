@@ -9,7 +9,7 @@ const {
 Page({
     data: {
         // imageRoot: 'https://101.200.228.228:9999',
-        imageRoot: 'https://deac.medclass.cn',
+        imageRoot: app.globalData.imageRoot,
         apiRoot,
         indicatorDots: false,
         autoplay: true,

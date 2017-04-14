@@ -3,7 +3,7 @@ require('./utils/service');
 const Promise = require('./libs/bluebird');
 const {apiRoot, appId} = require('./utils/api');
 
-const imageRoot = 'https://deac.medclass.cn';
+const imageRoot = 'http://deac.medclass.cn';
 
 const user = {
     username: 'louisGan',
