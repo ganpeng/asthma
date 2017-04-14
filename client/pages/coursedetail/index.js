@@ -65,7 +65,6 @@ Page({
     submitRating() {
         const that = this;
         const rating = that.data.starImages.filter((image) => image === starActive).length;
-        console.log(rating);
     },
     playFirstVideo() {
         const that = this;
@@ -80,7 +79,6 @@ Page({
         const {courseware} = that.data.course;
         if (courseware && courseware[index].videoUrl) {
             wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&content=${courseware[index].content}&unit=${courseware[index].unit}&teacher=${courseware[index].teacher}`});
-            // wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].videoUrl}`});
         }
     }
 })
