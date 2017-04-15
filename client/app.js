@@ -27,6 +27,7 @@ const user = {
 
 App({
     onLaunch() {
+        const that = this;
         // Promise.all([wx.pro.login(), wx.pro.getUserInfo()]).then((results) => {
         //     const {code} = results[0];
         //     const {encryptedData, iv} = results[1];
@@ -41,10 +42,17 @@ App({
         }).catch((err) => {
             console.log(err);
         });
+        wx.pro.getSystemInfo()
+            .then((res) => {
+                that.globalData.systemInfo = res;
+            }).catch((err) => {
+                console.log(err);
+            });
     },
     globalData: {
         userInfo: null,
-        imageRoot
+        imageRoot,
+        systemInfo: null
     }
 })
 

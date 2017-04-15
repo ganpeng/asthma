@@ -6,19 +6,13 @@ const {
     recommendedCourse
 } = require('../../utils/api');
 
+
 Page({
     data: {
-        // imageRoot: 'https://101.200.228.228:9999',
         imageRoot: app.globalData.imageRoot,
         apiRoot,
-        indicatorDots: false,
-        autoplay: true,
-        interval: 3000,
-        duration: 1000,
-        circular: true,
         winWidth: 0,
         winHeight: 0,
-        pixelRatio:2,
         banners: [],
         qulityVideos: [],
         recommendedCourses: []
@@ -57,8 +51,7 @@ Page({
                 console.log(res);
                 that.setData({
                     winWidth: res.windowWidth,
-                    winHeight: res.windowHeight,
-                    pixelRatio: res.pixelRatio
+                    winHeight: res.windowHeight
                 });
             }).catch((err) => {
                 console.log(err);
