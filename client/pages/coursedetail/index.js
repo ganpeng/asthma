@@ -1,6 +1,8 @@
 const app = getApp()
 
-const {courseDetail} = require('../../utils/api');
+const {
+    courseDetail
+} = require('../../utils/api');
 const star = '../../images/star_gan.png';
 const starActive = '../../images/star_gan_active.png';
 
@@ -18,14 +20,19 @@ Page({
         const that = this;
         this.setImages();
         wx.pro.getSystemInfo().then((res) => {
-            this.setData({winWidth: res.windowWidth, winHeight: res.windowHeight});
+            this.setData({
+                winWidth: res.windowWidth,
+                winHeight: res.windowHeight
+            });
         }).catch((err) => {
             console.log(err);
         });
         wx.pro.request({
             url: courseDetail(option.id)
         }).then((data) => {
-            that.setData({course: data.course});
+            that.setData({
+                course: data.course
+            });
         }).catch((err) => {
             console.log(err);
         })
@@ -35,18 +42,24 @@ Page({
         for (let i = 0; i < 5; i++) {
             starImages.push(star);
         }
-        this.setData({starImages});
+        this.setData({
+            starImages
+        });
     },
     bindChange(e) {
         const that = this;
-        that.setData({currentTab: e.detail.current});
+        that.setData({
+            currentTab: e.detail.current
+        });
     },
     switchNav(e) {
         const that = this;
         if (this.data.currentTab === e.target.dataset.current) {
             return false;
         } else {
-            that.setData({currentTab: e.target.dataset.current})
+            that.setData({
+                currentTab: e.target.dataset.current
+            })
         }
     },
     changeStar(e) {
@@ -60,7 +73,9 @@ Page({
                 starImages.push(star);
             }
         }
-        that.setData({starImages});
+        that.setData({
+            starImages
+        });
     },
     submitRating() {
         const that = this;
@@ -70,15 +85,21 @@ Page({
         const that = this;
         const course = that.data.course.courseware[0];
         if (course && course.videoUrl) {
-            wx.navigateTo({url: `../videoplayer/index?videoUrl=${course.videoUrl}&content=${course.content}&unit=${course.unit}&teacher=${course.teacher}`});
+            wx.navigateTo({
+                url: `../videoplayer/index?videoUrl=${course.videoUrl}&content=${course.content}&unit=${course.unit}&teacher=${course.teacher}`
+            });
         }
     },
     playVideo(e) {
         const that = this;
         const index = e.target.dataset.index;
-        const {courseware} = that.data.course;
+        const {
+            courseware
+        } = that.data.course;
         if (courseware && courseware[index].videoUrl) {
-            wx.navigateTo({url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&content=${courseware[index].content}&unit=${courseware[index].unit}&teacher=${courseware[index].teacher}`});
+            wx.navigateTo({
+                url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&content=${courseware[index].content}&unit=${courseware[index].unit}&teacher=${courseware[index].teacher}`
+            });
         }
     }
 })

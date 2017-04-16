@@ -1,11 +1,11 @@
-<view class="container" style="width: {{winWidth}}px; height: {{winHeight}}px;">
-    <video src="{{src}}" controls  class="video-style" style="width: {{winWidth}}px"></video>
+<view class="container" style="width: {{winWidth}}px;">
+    <video src="{{src}}" controls  class="video-style" style="width: {{winWidth}}px;height:200px;"></video>
   	<view class="tab-wrapper">
 	    <view class="swiper-tab tab-list">
             <view class="swiper-tab-list tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">简介</view>
             <view class="swiper-tab-list tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">专家</view>
         </view>
-        <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 200}}px" bindchange="bindChange">
+        <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 243}}px" bindchange="bindChange">
             <swiper-item>
 				<view class="courseware-summary">
                     {{content}}

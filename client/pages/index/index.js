@@ -51,7 +51,6 @@ Page({
                 console.log(res);
                 that.setData({
                     winWidth: res.windowWidth,
-                    winHeight: res.windowHeight
                 });
             }).catch((err) => {
                 console.log(err);
