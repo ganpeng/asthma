@@ -55,6 +55,10 @@ page {
     height:244rpx;
 }
 
+.course-image-wrapper .course-image {
+    border-radius: 10rpx;
+}
+
 .course-name {
     font-size: 32rpx;
     height: 32px;
