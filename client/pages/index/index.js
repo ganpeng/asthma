@@ -48,7 +48,6 @@ Page({
         });
         wx.pro.getSystemInfo()
             .then((res) => {
-                console.log(res);
                 that.setData({
                     winWidth: res.windowWidth,
                 });
