@@ -53,16 +53,16 @@ export function getCourses(req, res) {
         }
 
         const skip = (page - 1) * LIMIT;
-        const courses = yield Course.find({}).sort({'createDate': -1}).skip(skip).limit(LIMIT).exec();
+        const courses = yield Course.find({}).sort({
+            'createDate': -1
+        }).skip(skip).limit(LIMIT).exec();
         const count = yield Course.find({}).count().exec();
 
-        setTimeout(() => {
-            res.json({
-                courses,
-                count,
-                page
-            });
-        }, 4000);
+        res.json({
+            courses,
+            count,
+            page
+        });
     }).catch((err) => {
         console.log(err);
     })

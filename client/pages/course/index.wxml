@@ -1,4 +1,4 @@
-<view class="container">
+<view class="container" style="height:{{winHeight}}px;">
     <view wx:if="{{noResults}}" class="no-searchlist">
         没有找到课程 ☺
     </view>

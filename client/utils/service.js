@@ -65,7 +65,8 @@ function promisify() {
         if (options.toast) {
             wx.showToast({
                 title: options.toast.title || '加载中',
-                icon: 'loading'
+                icon: 'loading',
+                duration: 10 * 60 * 1000
             })
         }
 
