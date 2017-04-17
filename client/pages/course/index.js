@@ -10,6 +10,7 @@ const {
 
 Page({
     data: {
+        imageRoot: app.globalData.imageRoot,
         winWidth: 0,
         winHeight: 0,
         page: 1,
@@ -55,6 +56,10 @@ Page({
         const that = this;
         const _page = that.data.page + 1;
         if (that.data.hasMore && !that.data.isLoading) {
+            that.setData({
+                isLoading: true,
+                hasMore: false
+            });
             that.getCoursesHandle(_page)
                 .then((res) => {
                     that.setData({
@@ -84,4 +89,3 @@ Page({
         }
     }
 })
-
