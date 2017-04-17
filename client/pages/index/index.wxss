@@ -39,6 +39,6 @@
     padding: 10rpx 20rpx;
     font-size: 28rpx;
     color: #fff;
-    background-color: #4593f8;
+    background-color: #7fabfd;
     border-radius: 8rpx;
 }

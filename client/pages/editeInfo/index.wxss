@@ -8,7 +8,7 @@ input {
     height: 80rpx;
     background-color: #fff;
     font-size: 26rpx;
-    color: #4593f8;
+    color: #7fabfd;
     border-radius:8rpx;
 }
 
@@ -25,7 +25,6 @@ input {
 .save-btn {
     padding: 20rpx 30rpx;
     font-size: 28rpx;
-    font-weight: 700;
     border-radius: 10rpx;
 }
 
@@ -36,5 +35,5 @@ input {
 
 .save-btn {
     color: #fff;
-    background-color: #4593f8;
+    background-color: #7fabfd;
 }

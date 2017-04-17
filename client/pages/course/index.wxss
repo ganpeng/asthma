@@ -4,7 +4,7 @@
 }
 
 .no-searchlist {
-    color: #4593f8;
+    color: #7fabfd;
     text-align: center;
     font-size: 28rpx;
     font-weight: 700;

@@ -32,7 +32,7 @@
 	margin-right: 40rpx;
 	color: #fff;
 	border-radius: 60rpx;
-	background-color: #4593f8;
+	background-color: #7fabfd;
 }
 
 .course-summary {
@@ -88,7 +88,7 @@
 	padding: 0 30rpx;
 	border-radius: 60rpx;
 	color: #fff;
-	background-color: #4593f8;
+	background-color: #7fabfd;
 }
 
 

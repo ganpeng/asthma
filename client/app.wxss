@@ -64,19 +64,18 @@ page {
     height: 32px;
     overflow:hidden;
     margin-bottom: 20rpx;
-    font-weight: 700;
     color: #000;
 }
 
 .course-group {
     color: #8c8c8c;
-    font-size: 28rpx;
+    font-size: 22rpx;
 }
 
 .course-status {
     display: flex;
     justify-content: space-between;
-    font-size: 28rpx;
+    font-size: 22rpx;
     color: #8c8c8c;
     margin-top: 20rpx;
 }
@@ -110,8 +109,8 @@ page {
     color: #777777;
 }
 .on {
-    color: #4593f8;
-    border-bottom: 5rpx solid #4593f8;
+    color: #7fabfd;
+    border-bottom: 5rpx solid #7fabfd;
 }
 
 .swiper-box {

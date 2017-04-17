@@ -4,8 +4,7 @@
     height: 80rpx;
     line-height: 80rpx;
     background: #fff;
-    color: #4593f8;
-    font-weight: 700;
+    color: #7fabfd;
     font-size: 28rpx;
     margin-bottom: 20rpx;
     overflow:hidden;
@@ -103,5 +102,5 @@
 }
 
 .city-picker-enter-btn {
-    background-color: #4593f8;
+    background-color: #7fabfd;
 }
