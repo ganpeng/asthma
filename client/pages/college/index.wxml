@@ -20,9 +20,11 @@
                 </view>
             </block>
         </view>
+        <!--
         <view class="more-college-group-btn" bindtap="toggleShowMore">
             {{showMoreCollegeGroup ? "收起" : "更多"}}
         </view>
+        -->
     </view>
     <!--
     <view class="course-content">
