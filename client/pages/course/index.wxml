@@ -2,7 +2,7 @@
     <view wx:if="{{noResults}}" class="no-searchlist">
         没有找到课程 ☺
     </view>
-    <scroll-view scroll-y="true" style="height: {{winHeight}}px;" bindscrolltolower="getMoreCouresHandle">
+    <scroll-view scroll-y="true" style="height: {{winHeight + 160}}px;" bindscrolltolower="getMoreCouresHandle">
         <view class="course-content">
             <block wx:for="{{courseList}}" wx:key="{{index}}">
                 <navigator url="../coursedetail/index?id={{item._id}}">

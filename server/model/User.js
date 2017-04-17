@@ -17,8 +17,9 @@ var User = mongoose.model('users', {
     addr: String, //通信地址
     code: String, //邮编
     doctor_certificate_code: String, //医师资格证编号
-    real: Number,//是否认证 0、未认证 1、认证 
+    real: Number,//是否认证 0、未认证 1、认证
     duty: String,
+    unionid: String,
     remember_me: String,
     mycourse: [String],//我的课程
 });
