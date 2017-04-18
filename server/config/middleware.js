@@ -1,6 +1,6 @@
 import fetch from 'node-fetch';
 import co from 'co';
-import WXBizDataCrypt from '../util/WxBizDataCrypt';
+import WXBizDataCrypt from '../util/WXBizDataCrypt';
 
 import config from './index';
 
