@@ -16,9 +16,12 @@ Page({
             videoUrl,
             content,
             unit,
-            teacher
+            teacher,
+            name
         } = options;
-        console.log(content, unit, teacher);
+        wx.setNavigationBarTitle({
+            title:name
+        });
         this.setData({
             src: videoUrl,
             content,

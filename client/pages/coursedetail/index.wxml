@@ -36,19 +36,23 @@
 				<scroll-view scroll-y="true" style="height:{{winHeight - 200}}px">
 					<view class="courseware-list">
 					    <block wx:for="{{course.courseware}}" wx:key="{{index}}">
-							<view class="courseware-item">
-								<view class="courseware-info">
-									<view class="courseware-name">
-										课件：{{item.name}}
+							<navigator url="../videoplayer/index?videoUrl={{item.mp4}}&name={{item.name}}&content={{item.content}}&unit={{item.unit}}&teacher={{item.teacher}}">
+								<view class="courseware-item">
+									<view class="courseware-info">
+										<view class="courseware-name">
+											课件：{{item.name}}
+										</view>
+										<view class="courseware-teacher">
+											讲师：{{item.teacher}}
+										</view>
 									</view>
-									<view class="courseware-teacher">
-										讲师：{{item.teacher}}
+									<!--
+									<view class="courseware-study-btn" data-index="{{index}}" bindtap="playVideo">
+										进入学习
 									</view>
+									-->
 								</view>
-								<view class="courseware-study-btn" data-index="{{index}}" bindtap="playVideo">
-									进入学习
-								</view>
-							</view>
+							</navigator>
 					    </block>
 					</view>
 				</scroll-view>

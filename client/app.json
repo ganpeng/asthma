@@ -14,8 +14,8 @@
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#7fabfd",
-        "navigationBarTitleText": "WeChat",
-        "navigationBarTextStyle": "black"
+        "navigationBarTitleText": "消化内镜",
+        "navigationBarTextStyle": "light"
     },
     "tabBar": {
         "color": "#5b5b5d",
