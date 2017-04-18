@@ -5,6 +5,8 @@ import cors from 'cors';
 import bodyParser from 'body-parser';
 import {join} from 'path';
 
+import { getSecretInfo } from './middleware';
+
 export default(app) => {
 
     app.use(cors());
@@ -14,4 +16,5 @@ export default(app) => {
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({extended: true}));
 
+    app.use(getSecretInfo);
 }

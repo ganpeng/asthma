@@ -7,7 +7,7 @@ import config from './index';
 const grant_type = "authorization_code";
 
 
-function getSecretInfo(req, res, next) {
+export function getSecretInfo(req, res, next) {
 	co(function* () {
         const { code, encryptedData, iv } = req.query;
         const params = "appid=" + config.appId + "&secret=" + config.appSecret + "&js_code=" + code + "&grant_type=" + grant_type;
