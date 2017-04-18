@@ -12,7 +12,7 @@ export default (app) => {
     app.use('/video', videoRoute);
     app.use('/specializedObj', specializedObjRoute);
     app.use('/search', searchRoute);
-    app.use('/user', getSecretInfo, (req, res) => {
+    app.use('/weixin', getSecretInfo, (req, res) => {
         res.json(req.wxData);
     })
 }
