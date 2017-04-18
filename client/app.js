@@ -47,15 +47,6 @@ App({
         }).catch((err) => {
             console.log(err);
         });
-        wx.pro.request({
-            url: `${apiRoot}/user`
-        }).then((res) => {
-            console.log('bbbb');
-            console.log(res);
-            console.log('bbbb');
-        }).catch((err) => {
-            console.log(err);
-        });
     },
     globalData: {
         userInfo: null,
