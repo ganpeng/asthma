@@ -86,7 +86,7 @@ Page({
         const course = that.data.course.courseware[0];
         if (course && course.videoUrl) {
             wx.navigateTo({
-                url: `../videoplayer/index?videoUrl=${course.videoUrl}&content=${course.content}&unit=${course.unit}&teacher=${course.teacher}`
+                url: `../videoplayer/index?videoUrl=${course.videoUrl}&name=${course.name}&content=${course.content}&unit=${course.unit}&teacher=${course.teacher}`
             });
         }
     },
@@ -98,7 +98,7 @@ Page({
         } = that.data.course;
         if (courseware && courseware[index].videoUrl) {
             wx.navigateTo({
-                url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&content=${courseware[index].content}&unit=${courseware[index].unit}&teacher=${courseware[index].teacher}`
+                url: `../videoplayer/index?videoUrl=${courseware[index].mp4}&name=${courseware[index].name}&content=${courseware[index].content}&unit=${courseware[index].unit}&teacher=${courseware[index].teacher}`
             });
         }
     }
