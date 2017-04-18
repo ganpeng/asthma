@@ -11,9 +11,103 @@
 
 }
 
-.courseware-summary,
 .courseware-expert {
 	padding: 32rpx;
 	color: #666;
 	font-size: 28rpx;
+}
+
+.courseware-teacher,
+.courseware-unit,
+.courseware-summary {
+	overflow:hidden;
+	margin-bottom: 30rpx;
+}
+
+.courseware-teacher-title,
+.courseware-unit-title,
+.courseware-summary-title {
+	color:#000;
+	font-size: 28rpx;
+	float:left;
+	margin-right: 10rpx;
+}
+
+
+.courseware-teacher-content,
+.courseware-unit-content,
+.courseware-summary-content {
+	color:#666;
+	overflow:hidden;
+	font-size: 24rpx;
+}
+
+/*
+	评论样式
+ */
+.rating-btn-wrapper {
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height: 200rpx;
+	background-color: #f2f2f2;
+	margin-bottom: 10rpx;
+}
+
+.comment-prompt {
+	font-size: 28rpx;
+	color: #399aff;
+	margin-top: 20rpx;
+	text-align:center;
+}
+
+.comments-item {
+	overflow:hidden;
+	padding: 20rpx;
+	box-sizing:border-box;
+	background-color: #f2f2f2;
+	margin-bottom: 10rpx;
+}
+
+.header-icon {
+	float:left;
+	width: 80rpx;
+	height: 80rpx;
+	margin-right: 20rpx;
+}
+
+.comment-text-info {
+	overflow:hidden;
+}
+
+.comment-user-and-rating {
+	display:flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 40rpx;
+}
+
+.comment-user-name {
+	font-size: 34rpx;
+	color: #333;
+}
+
+.star-rating {
+	overflow:hidden;
+}
+.star-item {
+	float:left;
+	width:30rpx;
+	height:30rpx;
+}
+
+.comment-time {
+	font-size: 24rpx;
+	color: #999;
+}
+
+.comment-content {
+	color: #666;
+	font-size: 28rpx;
+	margin-top: 20rpx;
 }
