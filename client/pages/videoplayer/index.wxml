@@ -170,11 +170,9 @@
                 <view class="comment-title">评价该课程</view>
                 <view class="comment-star-rating-wrapper">
                     <view class="star-rating">
-                        <image class="star-item" src="../../images/star_gan.png" />
-                        <image class="star-item" src="../../images/star_gan.png" />
-                        <image class="star-item" src="../../images/star_gan.png" />
-                        <image class="star-item" src="../../images/star_gan.png" />
-                        <image class="star-item" src="../../images/star_gan_active.png" />
+                        <block class="star-list" wx:for="{{starImages}}" wx:key="{{index}}">
+                            <image class="star-item" data-gindex="{{index}}" src="{{item}}" bindtap="changeStar" />
+                        </block>
                     </view>
                 </view>
                 <view class="comment-text">推荐</view>

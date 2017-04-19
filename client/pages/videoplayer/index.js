@@ -1,5 +1,8 @@
 const app = getApp();
 
+const star = '../../images/star_gan.png';
+const starActive = '../../images/star_gan_active.png';
+
 Page({
     data: {
         winWidth: 0,
@@ -9,7 +12,8 @@ Page({
         unit: '',
         teacher: '',
         currentTab: 0,
-        commentDialogStatus: false
+        commentDialogStatus: false,
+        starImages: []
     },
     onLoad: function(options) {
 
@@ -23,6 +27,7 @@ Page({
         wx.setNavigationBarTitle({
             title:name
         });
+        this.setImages();
         this.setData({
             src: videoUrl,
             content,
@@ -65,5 +70,34 @@ Page({
         if (e.target.id === 'dialog-bg') {
             that.setData({commentDialogStatus: false});
         }
+    },
+    setImages() {
+        const starImages = [];
+        for (let i = 0; i < 5; i++) {
+            starImages.push(star);
+        }
+        this.setData({
+            starImages
+        });
+    },
+    changeStar(e) {
+        const starImages = [];
+        const index = e.target.dataset.gindex;
+        const that = this;
+        for (let i = 0; i < 5; i++) {
+            if (i <= index) {
+                starImages.push(starActive);
+            } else {
+                starImages.push(star);
+            }
+        }
+        that.setData({
+            starImages
+        });
+    },
+    submitComment() {
+        const that = this;
+        const rating = that.data.starImages.filter((image) => image === starActive).length;
+        console.log(rating);
     }
 })
