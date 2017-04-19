@@ -93,7 +93,7 @@ page {
 .swiper-tab{
     width: 100%;
     text-align: center;
-    line-height: 80rpx;
+    line-height: 40px;
     background-color: #fff;
 }
 .swiper-tab-list {

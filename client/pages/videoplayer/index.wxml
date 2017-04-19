@@ -35,124 +35,132 @@
 				</view>
             </swiper-item>
             <swiper-item>
-                <view class="rating-btn-wrapper">
-                    <view>
-                        <view class="star-rating">
-                            <image class="star-item" src="../../images/star_gan.png" />
-                            <image class="star-item" src="../../images/star_gan.png" />
-                            <image class="star-item" src="../../images/star_gan.png" />
-                            <image class="star-item" src="../../images/star_gan.png" />
-                            <image class="star-item" src="../../images/star_gan_active.png" />
-                        </view>
-                        <view class="comment-prompt">点我评论</view>
-                    </view>
-                </view>
-                <view class="comments-list">
-                    <view class="comments-item">
-                        <image class="header-icon" src="../../images/header_icon.png" />
-                        <view class="comment-text-info">
-                            <view class="comment-user-and-rating">
-                                <view class="comment-user-name">
-                                    louisGan
-                                </view>
-                                <view class="star-rating">
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan_active.png" />
-                                </view>
+                <scroll-view scroll-y="true" style="height: {{winHeight - 240}}px;">
+                    <view class="seperator-line"></view>
+                    <view class="rating-btn-wrapper">
+                        <view>
+                            <view class="star-rating">
+                                <image class="star-item" src="../../images/star_gan.png" />
+                                <image class="star-item" src="../../images/star_gan.png" />
+                                <image class="star-item" src="../../images/star_gan.png" />
+                                <image class="star-item" src="../../images/star_gan.png" />
+                                <image class="star-item" src="../../images/star_gan_active.png" />
                             </view>
-                            <view class="comment-time">
-                                2017-04-17
-                            </view>
-                            <view class="comment-content">
-                                这是评论的正文部分
-                            </view>
+                            <view class="comment-prompt">点我评论</view>
                         </view>
                     </view>
-                    <view class="comments-item">
-                        <image class="header-icon" src="../../images/header_icon.png" />
-                        <view class="comment-text-info">
-                            <view class="comment-user-and-rating">
-                                <view class="comment-user-name">
-                                    louisGan
+                    <view class="seperator-line"></view>
+                    <view class="comments-list">
+                        <view class="comments-item">
+                            <image class="header-icon" src="../../images/header_icon.png" />
+                            <view class="comment-text-info">
+                                <view class="comment-user-and-rating">
+                                    <view class="comment-user-name">
+                                        louisGan
+                                    </view>
+                                    <view class="star-rating">
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan_active.png" />
+                                    </view>
                                 </view>
-                                <view class="star-rating">
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan_active.png" />
+                                <view class="comment-time">
+                                    2017-04-17
                                 </view>
-                            </view>
-                            <view class="comment-time">
-                                2017-04-17
-                            </view>
-                            <view class="comment-content">
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
-                                这是评论的正文部分
+                                <view class="comment-content">
+                                    这是评论的正文部分
+                                </view>
                             </view>
                         </view>
-                    </view>
-                    <view class="comments-item">
-                        <image class="header-icon" src="../../images/header_icon.png" />
-                        <view class="comment-text-info">
-                            <view class="comment-user-and-rating">
-                                <view class="comment-user-name">
-                                    louisGan
+                        <view class="seperator-line"></view>
+                        <view class="comments-item">
+                            <image class="header-icon" src="../../images/header_icon.png" />
+                            <view class="comment-text-info">
+                                <view class="comment-user-and-rating">
+                                    <view class="comment-user-name">
+                                        louisGan
+                                    </view>
+                                    <view class="star-rating">
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan_active.png" />
+                                    </view>
                                 </view>
-                                <view class="star-rating">
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan_active.png" />
+                                <view class="comment-time">
+                                    2017-04-17
                                 </view>
-                            </view>
-                            <view class="comment-time">
-                                2017-04-17
-                            </view>
-                            <view class="comment-content">
-                                这是评论的正文部分
+                                <view class="comment-content">
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                    这是评论的正文部分
+                                </view>
                             </view>
                         </view>
-                    </view>
-                    <view class="comments-item">
-                        <image class="header-icon" src="../../images/header_icon.png" />
-                        <view class="comment-text-info">
-                            <view class="comment-user-and-rating">
-                                <view class="comment-user-name">
-                                    louisGan
+                        <view class="seperator-line"></view>
+                        <view class="comments-item">
+                            <image class="header-icon" src="../../images/header_icon.png" />
+                            <view class="comment-text-info">
+                                <view class="comment-user-and-rating">
+                                    <view class="comment-user-name">
+                                        louisGan
+                                    </view>
+                                    <view class="star-rating">
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan_active.png" />
+                                    </view>
                                 </view>
-                                <view class="star-rating">
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan.png" />
-                                    <image class="star-item" src="../../images/star_gan_active.png" />
+                                <view class="comment-time">
+                                    2017-04-17
                                 </view>
-                            </view>
-                            <view class="comment-time">
-                                2017-04-17
-                            </view>
-                            <view class="comment-content">
-                                这是评论的正文部分
+                                <view class="comment-content">
+                                    这是评论的正文部分
+                                </view>
                             </view>
                         </view>
+                        <view class="seperator-line"></view>
+                        <view class="comments-item">
+                            <image class="header-icon" src="../../images/header_icon.png" />
+                            <view class="comment-text-info">
+                                <view class="comment-user-and-rating">
+                                    <view class="comment-user-name">
+                                        louisGan
+                                    </view>
+                                    <view class="star-rating">
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan.png" />
+                                        <image class="star-item" src="../../images/star_gan_active.png" />
+                                    </view>
+                                </view>
+                                <view class="comment-time">
+                                    2017-04-17
+                                </view>
+                                <view class="comment-content">
+                                    这是评论的正文部分
+                                </view>
+                            </view>
+                        </view>
+                        <view class="seperator-line"></view>
                     </view>
-                </view>
+                </scroll-view>
             </swiper-item>
         </swiper>
     </view>
