@@ -86,7 +86,7 @@
 }
 
 .comment-user-name {
-	font-size: 34rpx;
+	font-size: 28rpx;
 	color: #333;
 }
 
