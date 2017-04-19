@@ -1,11 +1,11 @@
 import co from 'co';
 
-import Banner from '../model/banner';
+import Wxbanner from '../model/wxbanner';
 
 
 export function getBanners(req, res) {
     co(function*() {
-        const banners = yield Banner.find({status: 1}).limit(3).exec();
+        const banners = yield Wxbanner.find({status: 1}).limit(3).exec();
         res.json({banners});
     }).catch((err) => {
       console.log(err);

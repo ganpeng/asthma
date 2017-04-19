@@ -1,5 +1,5 @@
 // const apiRoot = 'http://192.168.0.163:1988';
-//const apiRoot = 'http://localhost:1988';
+// const apiRoot = 'http://localhost:1988';
 const apiRoot = 'https://www.stydyweb.com';
 
 function courseDetailApi(id) {

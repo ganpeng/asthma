@@ -1,4 +1,5 @@
-var mongoose = require("./db");
+import mongoose from 'mongoose';
+
 var Wxbanner = mongoose.model('wxbanners', {
     status: Number, //是否发布1-已发布；0-未发布
     createDate: Date,
@@ -9,4 +10,4 @@ var Wxbanner = mongoose.model('wxbanners', {
     title: String, //图片标题
 });
 
-module.exports = Wxbanner;
+export default Wxbanner;
