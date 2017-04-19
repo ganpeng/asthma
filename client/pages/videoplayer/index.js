@@ -8,7 +8,8 @@ Page({
         content: '',
         unit: '',
         teacher: '',
-        currentTab: 0
+        currentTab: 0,
+        commentDialogStatus: false
     },
     onLoad: function(options) {
 
@@ -53,6 +54,16 @@ Page({
             that.setData({
                 currentTab: e.target.dataset.current
             })
+        }
+    },
+    showCommentDialog() {
+        const that = this;
+        that.setData({commentDialogStatus: true});
+    },
+    hideCommentDialog(e) {
+        const that = this;
+        if (e.target.id === 'dialog-bg') {
+            that.setData({commentDialogStatus: false});
         }
     }
 })
