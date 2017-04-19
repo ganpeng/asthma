@@ -164,4 +164,21 @@
             </swiper-item>
         </swiper>
     </view>
+    <view class="comment-dialog">
+        <view class="comment-field">
+            <view class="comment-title">评价该课程</view>
+            <view class="comment-star-rating-wrapper">
+                <view class="star-rating">
+                    <image class="star-item" src="../../images/star_gan.png" />
+                    <image class="star-item" src="../../images/star_gan.png" />
+                    <image class="star-item" src="../../images/star_gan.png" />
+                    <image class="star-item" src="../../images/star_gan.png" />
+                    <image class="star-item" src="../../images/star_gan_active.png" />
+                </view>
+            </view>
+            <view class="comment-text">推荐</view>
+            <textarea class="comment-input-field" placeholder="评论，140字以内"  placeholder-style="color:#999;" />
+            <view class="submit-comment-btn">提交</view>
+        </view>
+    </view>
 </view>
