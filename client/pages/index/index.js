@@ -18,7 +18,7 @@ Page({
         recommendedCourses: []
     },
     onLoad() {
-        var that = this
+        const that = this;
         wx.pro.request({
             url: banner,
         }).then((data) => {
@@ -58,6 +58,6 @@ Page({
     gotoCollege() {
         wx.switchTab({
             url: "../college/index"
-        })
+        });
     }
 })
