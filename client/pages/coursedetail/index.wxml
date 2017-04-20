@@ -24,7 +24,9 @@
 	    <view class="swiper-tab tab-list">
             <view class="swiper-tab-list2 tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="switchNav">课程简介</view>
             <view class="swiper-tab-list2 tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="switchNav">课程目录</view>
+            <!--
             <view class="swiper-tab-list2 tab-item  {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="switchNav">课程评分</view>
+            -->
         </view>
         <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 200}}px" bindchange="bindChange">
             <swiper-item>
@@ -57,6 +59,7 @@
 					</view>
 				</scroll-view>
             </swiper-item>
+            <!--
             <swiper-item>
                 <view class="star-rating">
                     <block class="star-list" wx:for="{{starImages}}" wx:key="{{index}}">
@@ -65,6 +68,7 @@
                     <view class="star-rating-btn" bindtap="submitRating">确认</view>
                 </view>
             </swiper-item>
+            -->
         </swiper>
     </view>
 </view>
