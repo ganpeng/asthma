@@ -728,7 +728,6 @@ function getProvince() {
     return province;
 }
 
-
 module.exports = {
 	getDepartment,
 	getProvince
